@@ -130,6 +130,7 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.scanner"><code class="docutils literal notranslate"><span class="pre">LanceDataset.scanner()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.schema"><code class="docutils literal notranslate"><span class="pre">LanceDataset.schema</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.session"><code class="docutils literal notranslate"><span class="pre">LanceDataset.session()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.sql"><code class="docutils literal notranslate"><span class="pre">LanceDataset.sql()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.stats"><code class="docutils literal notranslate"><span class="pre">LanceDataset.stats</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.tags"><code class="docutils literal notranslate"><span class="pre">LanceDataset.tags</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.take"><code class="docutils literal notranslate"><span class="pre">LanceDataset.take()</span></code></a></li>
@@ -400,6 +401,7 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.scanner"><code class="docutils literal notranslate"><span class="pre">LanceDataset.scanner()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.schema"><code class="docutils literal notranslate"><span class="pre">LanceDataset.schema</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.session"><code class="docutils literal notranslate"><span class="pre">LanceDataset.session()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.sql"><code class="docutils literal notranslate"><span class="pre">LanceDataset.sql()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.stats"><code class="docutils literal notranslate"><span class="pre">LanceDataset.stats</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.tags"><code class="docutils literal notranslate"><span class="pre">LanceDataset.tags</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.take"><code class="docutils literal notranslate"><span class="pre">LanceDataset.take()</span></code></a></li>
@@ -560,6 +562,19 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.ScannerBuilder.with_fragments"><code class="docutils literal notranslate"><span class="pre">ScannerBuilder.with_fragments()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.ScannerBuilder.with_row_address"><code class="docutils literal notranslate"><span class="pre">ScannerBuilder.with_row_address()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.ScannerBuilder.with_row_id"><code class="docutils literal notranslate"><span class="pre">ScannerBuilder.with_row_id()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="all-modules.html#lance.dataset.SqlQuery"><code class="docutils literal notranslate"><span class="pre">SqlQuery</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.SqlQuery.explain_plan"><code class="docutils literal notranslate"><span class="pre">SqlQuery.explain_plan()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.SqlQuery.to_batch_records"><code class="docutils literal notranslate"><span class="pre">SqlQuery.to_batch_records()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.SqlQuery.to_stream_reader"><code class="docutils literal notranslate"><span class="pre">SqlQuery.to_stream_reader()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="all-modules.html#lance.dataset.SqlQueryBuilder"><code class="docutils literal notranslate"><span class="pre">SqlQueryBuilder</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.SqlQueryBuilder.build"><code class="docutils literal notranslate"><span class="pre">SqlQueryBuilder.build()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.SqlQueryBuilder.table_name"><code class="docutils literal notranslate"><span class="pre">SqlQueryBuilder.table_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.SqlQueryBuilder.with_row_addr"><code class="docutils literal notranslate"><span class="pre">SqlQueryBuilder.with_row_addr()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.SqlQueryBuilder.with_row_id"><code class="docutils literal notranslate"><span class="pre">SqlQueryBuilder.with_row_id()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="all-modules.html#lance.dataset.Tag"><code class="docutils literal notranslate"><span class="pre">Tag</span></code></a><ul>
@@ -788,6 +803,8 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="all-modules.html#lance.dataset.SqlQueryBuilder.build">build() (lance.dataset.SqlQueryBuilder method)</a>
+</li>
       <li><a href="all-modules.html#lance.dataset.BulkCommitResult">BulkCommitResult (class in lance.dataset)</a>
 </li>
       <li><a href="all-modules.html#lance.dataset.FieldStatistics.bytes_on_disk">bytes_on_disk (lance.dataset.FieldStatistics attribute)</a>
@@ -1045,6 +1062,8 @@
       <li><a href="all-modules.html#lance.dataset.LanceScanner.explain_plan">explain_plan() (lance.dataset.LanceScanner method)</a>
 
       <ul>
+        <li><a href="all-modules.html#lance.dataset.SqlQuery.explain_plan">(lance.dataset.SqlQuery method)</a>
+</li>
         <li><a href="all-modules.html#lance.LanceScanner.explain_plan">(lance.LanceScanner method)</a>
 </li>
       </ul></li>
@@ -1882,6 +1901,16 @@
 </li>
       <li><a href="all-modules.html#lance.BlobFile.size">size() (lance.BlobFile method)</a>
 </li>
+      <li><a href="all-modules.html#lance.dataset.LanceDataset.sql">sql() (lance.dataset.LanceDataset method)</a>
+
+      <ul>
+        <li><a href="all-modules.html#lance.LanceDataset.sql">(lance.LanceDataset method)</a>
+</li>
+      </ul></li>
+      <li><a href="all-modules.html#lance.dataset.SqlQuery">SqlQuery (class in lance.dataset)</a>
+</li>
+      <li><a href="all-modules.html#lance.dataset.SqlQueryBuilder">SqlQueryBuilder (class in lance.dataset)</a>
+</li>
       <li><a href="all-modules.html#lance.dataset.LanceDataset.stats">stats (lance.dataset.LanceDataset property)</a>
 
       <ul>
@@ -1896,6 +1925,8 @@
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="all-modules.html#lance.dataset.SqlQueryBuilder.table_name">table_name() (lance.dataset.SqlQueryBuilder method)</a>
+</li>
       <li><a href="all-modules.html#lance.dataset.Tag">Tag (class in lance.dataset)</a>
 </li>
       <li><a href="all-modules.html#lance.dataset.Tags">Tags (class in lance.dataset)</a>
@@ -1930,6 +1961,8 @@
 </li>
       <li><a href="all-modules.html#lance.dataset.Version.timestamp">timestamp (lance.dataset.Version attribute)</a>
 </li>
+      <li><a href="all-modules.html#lance.dataset.SqlQuery.to_batch_records">to_batch_records() (lance.dataset.SqlQuery method)</a>
+</li>
       <li><a href="all-modules.html#lance.dataset.LanceDataset.to_batches">to_batches() (lance.dataset.LanceDataset method)</a>
 
       <ul>
@@ -1959,6 +1992,8 @@
 </li>
       </ul></li>
       <li><a href="all-modules.html#lance.dataset.ScannerBuilder.to_scanner">to_scanner() (lance.dataset.ScannerBuilder method)</a>
+</li>
+      <li><a href="all-modules.html#lance.dataset.SqlQuery.to_stream_reader">to_stream_reader() (lance.dataset.SqlQuery method)</a>
 </li>
       <li><a href="all-modules.html#lance.dataset.LanceDataset.to_table">to_table() (lance.dataset.LanceDataset method)</a>
 
@@ -2102,14 +2137,20 @@
         <li><a href="all-modules.html#lance.MergeInsertBuilder.when_not_matched_insert_all">(lance.MergeInsertBuilder method)</a>
 </li>
       </ul></li>
+      <li><a href="all-modules.html#lance.dataset.ScannerBuilder.with_fragments">with_fragments() (lance.dataset.ScannerBuilder method)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="all-modules.html#lance.dataset.ScannerBuilder.with_fragments">with_fragments() (lance.dataset.ScannerBuilder method)</a>
+      <li><a href="all-modules.html#lance.dataset.SqlQueryBuilder.with_row_addr">with_row_addr() (lance.dataset.SqlQueryBuilder method)</a>
 </li>
       <li><a href="all-modules.html#lance.dataset.ScannerBuilder.with_row_address">with_row_address() (lance.dataset.ScannerBuilder method)</a>
 </li>
       <li><a href="all-modules.html#lance.dataset.ScannerBuilder.with_row_id">with_row_id() (lance.dataset.ScannerBuilder method)</a>
+
+      <ul>
+        <li><a href="all-modules.html#lance.dataset.SqlQueryBuilder.with_row_id">(lance.dataset.SqlQueryBuilder method)</a>
 </li>
+      </ul></li>
       <li><a href="all-modules.html#lance.write_dataset">write_dataset() (in module lance)</a>
 
       <ul>

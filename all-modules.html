@@ -132,6 +132,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.scanner"><code class="docutils literal notranslate"><span class="pre">LanceDataset.scanner()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.schema"><code class="docutils literal notranslate"><span class="pre">LanceDataset.schema</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.session"><code class="docutils literal notranslate"><span class="pre">LanceDataset.session()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.sql"><code class="docutils literal notranslate"><span class="pre">LanceDataset.sql()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.stats"><code class="docutils literal notranslate"><span class="pre">LanceDataset.stats</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.tags"><code class="docutils literal notranslate"><span class="pre">LanceDataset.tags</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.take"><code class="docutils literal notranslate"><span class="pre">LanceDataset.take()</span></code></a></li>
@@ -402,6 +403,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.scanner"><code class="docutils literal notranslate"><span class="pre">LanceDataset.scanner()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.schema"><code class="docutils literal notranslate"><span class="pre">LanceDataset.schema</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.session"><code class="docutils literal notranslate"><span class="pre">LanceDataset.session()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.sql"><code class="docutils literal notranslate"><span class="pre">LanceDataset.sql()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.stats"><code class="docutils literal notranslate"><span class="pre">LanceDataset.stats</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.tags"><code class="docutils literal notranslate"><span class="pre">LanceDataset.tags</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.take"><code class="docutils literal notranslate"><span class="pre">LanceDataset.take()</span></code></a></li>
@@ -562,6 +564,19 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.ScannerBuilder.with_fragments"><code class="docutils literal notranslate"><span class="pre">ScannerBuilder.with_fragments()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.ScannerBuilder.with_row_address"><code class="docutils literal notranslate"><span class="pre">ScannerBuilder.with_row_address()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.ScannerBuilder.with_row_id"><code class="docutils literal notranslate"><span class="pre">ScannerBuilder.with_row_id()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lance.dataset.SqlQuery"><code class="docutils literal notranslate"><span class="pre">SqlQuery</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.SqlQuery.explain_plan"><code class="docutils literal notranslate"><span class="pre">SqlQuery.explain_plan()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.SqlQuery.to_batch_records"><code class="docutils literal notranslate"><span class="pre">SqlQuery.to_batch_records()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.SqlQuery.to_stream_reader"><code class="docutils literal notranslate"><span class="pre">SqlQuery.to_stream_reader()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lance.dataset.SqlQueryBuilder"><code class="docutils literal notranslate"><span class="pre">SqlQueryBuilder</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.SqlQueryBuilder.build"><code class="docutils literal notranslate"><span class="pre">SqlQueryBuilder.build()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.SqlQueryBuilder.table_name"><code class="docutils literal notranslate"><span class="pre">SqlQueryBuilder.table_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.SqlQueryBuilder.with_row_addr"><code class="docutils literal notranslate"><span class="pre">SqlQueryBuilder.with_row_addr()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.SqlQueryBuilder.with_row_id"><code class="docutils literal notranslate"><span class="pre">SqlQueryBuilder.with_row_id()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#lance.dataset.Tag"><code class="docutils literal notranslate"><span class="pre">Tag</span></code></a><ul>
@@ -2133,6 +2148,31 @@ the following will always return exact KNN results:</p>
 <dt class="sig sig-object py" id="lance.LanceDataset.session">
 <span class="sig-name descname"><span class="pre">session</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">_Session</span></span></span><a class="headerlink" href="#lance.LanceDataset.session" title="Link to this definition"></a></dt>
 <dd><p>Return the dataset session, which holds the dataset’s state.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.LanceDataset.sql">
+<span class="sig-name descname"><span class="pre">sql</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sql</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lance.dataset.SqlQueryBuilder" title="lance.dataset.SqlQueryBuilder"><span class="pre">SqlQueryBuilder</span></a></span></span><a class="headerlink" href="#lance.LanceDataset.sql" title="Link to this definition"></a></dt>
+<dd><p>Execute SQL query on the dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sql</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – SQL SELECT statement to execute. The query must reference the dataset
+as the FROM clause or omit the FROM clause to query the current dataset.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A builder that can be used to configure and build the query.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#lance.dataset.SqlQueryBuilder" title="lance.dataset.SqlQueryBuilder">SqlQueryBuilder</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">dataset</span><span class="p">(</span><span class="s2">&quot;/tmp/data.lance&quot;</span><span class="p">)</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT id, name FROM dataset WHERE age &gt; 30&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+<span class="n">query</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -5451,6 +5491,31 @@ the following will always return exact KNN results:</p>
 <dd><p>Return the dataset session, which holds the dataset’s state.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.LanceDataset.sql">
+<span class="sig-name descname"><span class="pre">sql</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sql</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lance.dataset.SqlQueryBuilder" title="lance.dataset.SqlQueryBuilder"><span class="pre">SqlQueryBuilder</span></a></span></span><a class="headerlink" href="#lance.dataset.LanceDataset.sql" title="Link to this definition"></a></dt>
+<dd><p>Execute SQL query on the dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sql</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – SQL SELECT statement to execute. The query must reference the dataset
+as the FROM clause or omit the FROM clause to query the current dataset.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A builder that can be used to configure and build the query.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#lance.dataset.SqlQueryBuilder" title="lance.dataset.SqlQueryBuilder">SqlQueryBuilder</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">dataset</span><span class="p">(</span><span class="s2">&quot;/tmp/data.lance&quot;</span><span class="p">)</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT id, name FROM dataset WHERE age &gt; 30&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+<span class="n">query</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="lance.dataset.LanceDataset.stats">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stats</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.dataset.LanceStats" title="lance.dataset.LanceStats"><span class="pre">LanceStats</span></a></em><a class="headerlink" href="#lance.dataset.LanceDataset.stats" title="Link to this definition"></a></dt>
@@ -6754,6 +6819,112 @@ row addresses may be useful in some advanced use cases.</p>
 <dt class="sig sig-object py" id="lance.dataset.ScannerBuilder.with_row_id">
 <span class="sig-name descname"><span class="pre">with_row_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_row_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lance.dataset.ScannerBuilder" title="lance.dataset.ScannerBuilder"><span class="pre">ScannerBuilder</span></a></span></span><a class="headerlink" href="#lance.dataset.ScannerBuilder.with_row_id" title="Link to this definition"></a></dt>
 <dd><p>Enable returns with row IDs.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lance.dataset.SqlQuery">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lance.dataset.</span></span><span class="sig-name descname"><span class="pre">SqlQuery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.SqlQuery" title="Link to this definition"></a></dt>
+<dd><p>An executable SQL query.</p>
+<p>This is created by calling <a class="reference internal" href="#lance.dataset.SqlQueryBuilder.build" title="lance.dataset.SqlQueryBuilder.build"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SqlQueryBuilder.build()</span></code></a>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.SqlQuery.explain_plan">
+<span class="sig-name descname"><span class="pre">explain_plan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analyze</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#lance.dataset.SqlQuery.explain_plan" title="Link to this definition"></a></dt>
+<dd><p>Explain the query plan.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – If True, print the verbose plan.</p></li>
+<li><p><strong>analyze</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – If True, analyze the query and print the statistics.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The query plan.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.SqlQuery.to_batch_records">
+<span class="sig-name descname"><span class="pre">to_batch_records</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.RecordBatch.html#pyarrow.RecordBatch" title="(in Apache Arrow v20.0.0)"><span class="pre">RecordBatch</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lance.dataset.SqlQuery.to_batch_records" title="Link to this definition"></a></dt>
+<dd><p>Execute the query and return a list of RecordBatches.</p>
+<p>This is an eager operation that will load all results into memory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[<a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.RecordBatch.html#pyarrow.RecordBatch" title="(in Apache Arrow v20.0.0)">pyarrow.RecordBatch</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.SqlQuery.to_stream_reader">
+<span class="sig-name descname"><span class="pre">to_stream_reader</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.RecordBatchReader.html#pyarrow.RecordBatchReader" title="(in Apache Arrow v20.0.0)"><span class="pre">RecordBatchReader</span></a></span></span><a class="headerlink" href="#lance.dataset.SqlQuery.to_stream_reader" title="Link to this definition"></a></dt>
+<dd><p>Execute the query and return a RecordBatchReader.</p>
+<p>This is a lazy operation that will stream results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.RecordBatchReader.html#pyarrow.RecordBatchReader" title="(in Apache Arrow v20.0.0)">pyarrow.RecordBatchReader</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lance.dataset.SqlQueryBuilder">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lance.dataset.</span></span><span class="sig-name descname"><span class="pre">SqlQueryBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.SqlQueryBuilder" title="Link to this definition"></a></dt>
+<dd><p>A builder for SQL queries on a Lance dataset.</p>
+<p>This builder allows for chaining of options to configure the SQL query.
+It is returned by <a class="reference internal" href="#lance.dataset.LanceDataset.sql" title="lance.dataset.LanceDataset.sql"><code class="xref py py-meth docutils literal notranslate"><span class="pre">LanceDataset.sql()</span></code></a>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.SqlQueryBuilder.build">
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lance.dataset.SqlQuery" title="lance.dataset.SqlQuery"><span class="pre">SqlQuery</span></a></span></span><a class="headerlink" href="#lance.dataset.SqlQueryBuilder.build" title="Link to this definition"></a></dt>
+<dd><p>Build the query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An executable query object.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#lance.dataset.SqlQuery" title="lance.dataset.SqlQuery">SqlQuery</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.SqlQueryBuilder.table_name">
+<span class="sig-name descname"><span class="pre">table_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lance.dataset.SqlQueryBuilder" title="lance.dataset.SqlQueryBuilder"><span class="pre">SqlQueryBuilder</span></a></span></span><a class="headerlink" href="#lance.dataset.SqlQueryBuilder.table_name" title="Link to this definition"></a></dt>
+<dd><p>Set the table name for the query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>table_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The name of the table to query.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.SqlQueryBuilder.with_row_addr">
+<span class="sig-name descname"><span class="pre">with_row_addr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_row_addr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lance.dataset.SqlQueryBuilder" title="lance.dataset.SqlQueryBuilder"><span class="pre">SqlQueryBuilder</span></a></span></span><a class="headerlink" href="#lance.dataset.SqlQueryBuilder.with_row_addr" title="Link to this definition"></a></dt>
+<dd><p>Include the row address in the query result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>with_row_addr</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default True</em>) – Whether to include the row address column (<cite>_rowaddr</cite>).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.SqlQueryBuilder.with_row_id">
+<span class="sig-name descname"><span class="pre">with_row_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_row_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lance.dataset.SqlQueryBuilder" title="lance.dataset.SqlQueryBuilder"><span class="pre">SqlQueryBuilder</span></a></span></span><a class="headerlink" href="#lance.dataset.SqlQueryBuilder.with_row_id" title="Link to this definition"></a></dt>
+<dd><p>Include the row ID in the query result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>with_row_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default True</em>) – Whether to include the row ID column (<cite>_rowid</cite>).</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
