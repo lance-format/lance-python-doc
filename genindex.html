@@ -322,6 +322,12 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.BulkCommitResult.merged"><code class="docutils literal notranslate"><span class="pre">BulkCommitResult.merged</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="all-modules.html#lance.dataset.ColumnOrdering"><code class="docutils literal notranslate"><span class="pre">ColumnOrdering</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.ColumnOrdering.ascending"><code class="docutils literal notranslate"><span class="pre">ColumnOrdering.ascending</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.ColumnOrdering.column_name"><code class="docutils literal notranslate"><span class="pre">ColumnOrdering.column_name</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.ColumnOrdering.nulls_first"><code class="docutils literal notranslate"><span class="pre">ColumnOrdering.nulls_first</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="all-modules.html#lance.dataset.DataStatistics"><code class="docutils literal notranslate"><span class="pre">DataStatistics</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.DataStatistics.fields"><code class="docutils literal notranslate"><span class="pre">DataStatistics.fields</span></code></a></li>
 </ul>
@@ -552,6 +558,7 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.ScannerBuilder.limit"><code class="docutils literal notranslate"><span class="pre">ScannerBuilder.limit()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.ScannerBuilder.nearest"><code class="docutils literal notranslate"><span class="pre">ScannerBuilder.nearest()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.ScannerBuilder.offset"><code class="docutils literal notranslate"><span class="pre">ScannerBuilder.offset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.ScannerBuilder.order_by"><code class="docutils literal notranslate"><span class="pre">ScannerBuilder.order_by()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.ScannerBuilder.prefilter"><code class="docutils literal notranslate"><span class="pre">ScannerBuilder.prefilter()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.ScannerBuilder.scan_in_order"><code class="docutils literal notranslate"><span class="pre">ScannerBuilder.scan_in_order()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.ScannerBuilder.scan_stats_callback"><code class="docutils literal notranslate"><span class="pre">ScannerBuilder.scan_stats_callback()</span></code></a></li>
@@ -761,15 +768,17 @@
       </ul></li>
       <li><a href="all-modules.html#lance.dataset.AlterColumn">AlterColumn (class in lance.dataset)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="all-modules.html#lance.dataset.LanceScanner.analyze_plan">analyze_plan() (lance.dataset.LanceScanner method)</a>
 
       <ul>
         <li><a href="all-modules.html#lance.LanceScanner.analyze_plan">(lance.LanceScanner method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="all-modules.html#lance.dataset.ScannerBuilder.apply_defaults">apply_defaults() (lance.dataset.ScannerBuilder method)</a>
+</li>
+      <li><a href="all-modules.html#lance.dataset.ColumnOrdering.ascending">ascending (lance.dataset.ColumnOrdering attribute)</a>
 </li>
       <li><a href="all-modules.html#lance.fragment.DeletionFile.asdict">asdict() (lance.fragment.DeletionFile method)</a>
 
@@ -843,6 +852,10 @@
 </li>
       <li><a href="all-modules.html#id49">column_indices (lance.fragment.DataFile attribute)</a>, <a href="all-modules.html#lance.fragment.DataFile.column_indices">[1]</a>
 </li>
+      <li><a href="all-modules.html#lance.dataset.ColumnOrdering.column_name">column_name (lance.dataset.ColumnOrdering attribute)</a>
+</li>
+      <li><a href="all-modules.html#lance.dataset.ColumnOrdering">ColumnOrdering (class in lance.dataset)</a>
+</li>
       <li><a href="all-modules.html#lance.dataset.ScannerBuilder.columns">columns() (lance.dataset.ScannerBuilder method)</a>
 </li>
       <li><a href="all-modules.html#lance.dataset.LanceDataset.commit">commit() (lance.dataset.LanceDataset static method)</a>
@@ -865,14 +878,14 @@
         <li><a href="all-modules.html#lance.LanceDataset.config">(lance.LanceDataset method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="all-modules.html#lance.dataset.MergeInsertBuilder.conflict_retries">conflict_retries() (lance.dataset.MergeInsertBuilder method)</a>
 
       <ul>
         <li><a href="all-modules.html#lance.MergeInsertBuilder.conflict_retries">(lance.MergeInsertBuilder method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="all-modules.html#lance.dataset.LanceDataset.count_rows">count_rows() (lance.dataset.LanceDataset method)</a>
 
       <ul>
@@ -1605,9 +1618,11 @@
         <li><a href="all-modules.html#id17">(lance.LanceOperation.Overwrite attribute)</a>, <a href="all-modules.html#lance.LanceOperation.Overwrite.new_schema">[1]</a>
 </li>
       </ul></li>
+      <li><a href="all-modules.html#lance.dataset.AlterColumn.nullable">nullable (lance.dataset.AlterColumn attribute)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="all-modules.html#lance.dataset.AlterColumn.nullable">nullable (lance.dataset.AlterColumn attribute)</a>
+      <li><a href="all-modules.html#lance.dataset.ColumnOrdering.nulls_first">nulls_first (lance.dataset.ColumnOrdering attribute)</a>
 </li>
       <li><a href="all-modules.html#lance.dataset.DatasetStats.num_deleted_rows">num_deleted_rows (lance.dataset.DatasetStats attribute)</a>
 
@@ -1665,10 +1680,10 @@
         <li><a href="all-modules.html#lance.LanceOperation.RewrittenIndex.old_id">(lance.LanceOperation.RewrittenIndex attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="all-modules.html#lance.dataset.AutoCleanupConfig.older_than_seconds">older_than_seconds (lance.dataset.AutoCleanupConfig attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="all-modules.html#lance.dataset.Transaction.operation">operation (lance.dataset.Transaction attribute)</a>
 
       <ul>
@@ -1682,6 +1697,8 @@
 </li>
       </ul></li>
       <li><a href="all-modules.html#lance.dataset.DatasetOptimizer.optimize_indices">optimize_indices() (lance.dataset.DatasetOptimizer method)</a>
+</li>
+      <li><a href="all-modules.html#lance.dataset.ScannerBuilder.order_by">order_by() (lance.dataset.ScannerBuilder method)</a>
 </li>
   </ul></td>
 </tr></table>
