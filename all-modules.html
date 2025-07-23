@@ -93,6 +93,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#lance.LanceDataset"><code class="docutils literal notranslate"><span class="pre">LanceDataset</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.add_columns"><code class="docutils literal notranslate"><span class="pre">LanceDataset.add_columns()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.alter_columns"><code class="docutils literal notranslate"><span class="pre">LanceDataset.alter_columns()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.centroids"><code class="docutils literal notranslate"><span class="pre">LanceDataset.centroids()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.checkout_version"><code class="docutils literal notranslate"><span class="pre">LanceDataset.checkout_version()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.cleanup_old_versions"><code class="docutils literal notranslate"><span class="pre">LanceDataset.cleanup_old_versions()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.commit"><code class="docutils literal notranslate"><span class="pre">LanceDataset.commit()</span></code></a></li>
@@ -109,6 +110,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.drop_index"><code class="docutils literal notranslate"><span class="pre">LanceDataset.drop_index()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.get_fragment"><code class="docutils literal notranslate"><span class="pre">LanceDataset.get_fragment()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.get_fragments"><code class="docutils literal notranslate"><span class="pre">LanceDataset.get_fragments()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.get_ivf_model"><code class="docutils literal notranslate"><span class="pre">LanceDataset.get_ivf_model()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.has_index"><code class="docutils literal notranslate"><span class="pre">LanceDataset.has_index</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.head"><code class="docutils literal notranslate"><span class="pre">LanceDataset.head()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.index_statistics"><code class="docutils literal notranslate"><span class="pre">LanceDataset.index_statistics()</span></code></a></li>
@@ -370,6 +372,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#lance.dataset.LanceDataset"><code class="docutils literal notranslate"><span class="pre">LanceDataset</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.add_columns"><code class="docutils literal notranslate"><span class="pre">LanceDataset.add_columns()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.alter_columns"><code class="docutils literal notranslate"><span class="pre">LanceDataset.alter_columns()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.centroids"><code class="docutils literal notranslate"><span class="pre">LanceDataset.centroids()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.checkout_version"><code class="docutils literal notranslate"><span class="pre">LanceDataset.checkout_version()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.cleanup_old_versions"><code class="docutils literal notranslate"><span class="pre">LanceDataset.cleanup_old_versions()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.commit"><code class="docutils literal notranslate"><span class="pre">LanceDataset.commit()</span></code></a></li>
@@ -386,6 +389,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.drop_index"><code class="docutils literal notranslate"><span class="pre">LanceDataset.drop_index()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.get_fragment"><code class="docutils literal notranslate"><span class="pre">LanceDataset.get_fragment()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.get_fragments"><code class="docutils literal notranslate"><span class="pre">LanceDataset.get_fragments()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.get_ivf_model"><code class="docutils literal notranslate"><span class="pre">LanceDataset.get_ivf_model()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.has_index"><code class="docutils literal notranslate"><span class="pre">LanceDataset.has_index</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.head"><code class="docutils literal notranslate"><span class="pre">LanceDataset.head()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.index_statistics"><code class="docutils literal notranslate"><span class="pre">LanceDataset.index_statistics()</span></code></a></li>
@@ -1115,6 +1119,20 @@ data type is not changed.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="lance.LanceDataset.centroids">
+<span class="sig-name descname"><span class="pre">centroids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.LanceDataset.centroids" title="Link to this definition"></a></dt>
+<dd><p>Return IVF centroids for a given index/column.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>optional</em>) – Explicit index name.  If omitted, <em>column</em> must be provided.</p></li>
+<li><p><strong>column</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>optional</em>) – Column whose default IVF index should be inspected.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="lance.LanceDataset.checkout_version">
 <span class="sig-name descname"><span class="pre">checkout_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lance.dataset.LanceDataset" title="lance.dataset.LanceDataset"><span class="pre">LanceDataset</span></a></span></span><a class="headerlink" href="#lance.LanceDataset.checkout_version" title="Link to this definition"></a></dt>
 <dd><p>Load the given version of the dataset.</p>
@@ -1696,6 +1714,19 @@ the indices.</p>
 <span class="sig-name descname"><span class="pre">get_fragments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Expression</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.LanceFragment" title="lance.LanceFragment"><span class="pre">LanceFragment</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lance.LanceDataset.get_fragments" title="Link to this definition"></a></dt>
 <dd><p>Get all fragments from the dataset.</p>
 <p>Note: filter is not supported yet.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.LanceDataset.get_ivf_model">
+<span class="sig-name descname"><span class="pre">get_ivf_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.LanceDataset.get_ivf_model" title="Link to this definition"></a></dt>
+<dd><p>Return the IVF model for a vector index.</p>
+<p>This directly forwards to the underlying Rust Dataset implementation
+and returns a <code class="docutils literal notranslate"><span class="pre">PyIvfModel</span></code> instance (see <code class="docutils literal notranslate"><span class="pre">lance.indices</span></code>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The name of the vector index (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;vector_idx&quot;</span></code>).</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py property">
@@ -4486,6 +4517,20 @@ data type is not changed.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.LanceDataset.centroids">
+<span class="sig-name descname"><span class="pre">centroids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceDataset.centroids" title="Link to this definition"></a></dt>
+<dd><p>Return IVF centroids for a given index/column.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>optional</em>) – Explicit index name.  If omitted, <em>column</em> must be provided.</p></li>
+<li><p><strong>column</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>optional</em>) – Column whose default IVF index should be inspected.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="lance.dataset.LanceDataset.checkout_version">
 <span class="sig-name descname"><span class="pre">checkout_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lance.dataset.LanceDataset" title="lance.dataset.LanceDataset"><span class="pre">LanceDataset</span></a></span></span><a class="headerlink" href="#lance.dataset.LanceDataset.checkout_version" title="Link to this definition"></a></dt>
 <dd><p>Load the given version of the dataset.</p>
@@ -5067,6 +5112,19 @@ the indices.</p>
 <span class="sig-name descname"><span class="pre">get_fragments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Expression</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.LanceFragment" title="lance.LanceFragment"><span class="pre">LanceFragment</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lance.dataset.LanceDataset.get_fragments" title="Link to this definition"></a></dt>
 <dd><p>Get all fragments from the dataset.</p>
 <p>Note: filter is not supported yet.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.LanceDataset.get_ivf_model">
+<span class="sig-name descname"><span class="pre">get_ivf_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceDataset.get_ivf_model" title="Link to this definition"></a></dt>
+<dd><p>Return the IVF model for a vector index.</p>
+<p>This directly forwards to the underlying Rust Dataset implementation
+and returns a <code class="docutils literal notranslate"><span class="pre">PyIvfModel</span></code> instance (see <code class="docutils literal notranslate"><span class="pre">lance.indices</span></code>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The name of the vector index (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;vector_idx&quot;</span></code>).</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py property">
