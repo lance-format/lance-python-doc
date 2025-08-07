@@ -280,9 +280,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#lance.MergeInsertBuilder"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lance.MergeInsertBuilder.analyze_plan"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.analyze_plan()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.MergeInsertBuilder.conflict_retries"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.conflict_retries()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.MergeInsertBuilder.execute"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.execute()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.MergeInsertBuilder.execute_uncommitted"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.execute_uncommitted()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.MergeInsertBuilder.explain_plan"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.explain_plan()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.MergeInsertBuilder.retry_timeout"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.retry_timeout()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.MergeInsertBuilder.when_matched_update_all"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.when_matched_update_all()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.MergeInsertBuilder.when_not_matched_by_source_delete"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.when_not_matched_by_source_delete()</span></code></a></li>
@@ -545,9 +547,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#lance.dataset.MergeInsertBuilder"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.MergeInsertBuilder.analyze_plan"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.analyze_plan()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.MergeInsertBuilder.conflict_retries"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.conflict_retries()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.MergeInsertBuilder.execute"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.execute()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.MergeInsertBuilder.execute_uncommitted"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.execute_uncommitted()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.MergeInsertBuilder.explain_plan"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.explain_plan()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.MergeInsertBuilder.retry_timeout"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.retry_timeout()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.MergeInsertBuilder.when_matched_update_all"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.when_matched_update_all()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.MergeInsertBuilder.when_not_matched_by_source_delete"><code class="docutils literal notranslate"><span class="pre">MergeInsertBuilder.when_not_matched_by_source_delete()</span></code></a></li>
@@ -3800,6 +3804,85 @@ those fields.</p>
 <dt class="sig sig-object py" id="lance.MergeInsertBuilder">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lance.</span></span><span class="sig-name descname"><span class="pre">MergeInsertBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.MergeInsertBuilder" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
+<dt class="sig sig-object py" id="lance.MergeInsertBuilder.analyze_plan">
+<span class="sig-name descname"><span class="pre">analyze_plan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ReaderLike</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pa.Schema</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#lance.MergeInsertBuilder.analyze_plan" title="Link to this definition"></a></dt>
+<dd><p>Generate the execution plan and analyze its performance with real data.</p>
+<p>This method creates the execution plan using the provided source data,
+executes it to collect performance metrics, and returns the analysis
+as a formatted string. This is useful for understanding the actual
+performance characteristics of the merge insert operation with your data.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This method executes the merge insert operation to collect metrics
+but <strong>does not commit the changes</strong>. While data files may be written
+to storage during execution, they will not be referenced by any dataset
+version and the dataset remains unchanged. This is intended for
+performance analysis only.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_obj</strong> (<em>ReaderLike</em>) – The source data that would be merged into the dataset. This parameter
+can be any source of data (e.g. table / dataset) that
+<a class="reference internal" href="#lance.write_dataset" title="lance.write_dataset"><code class="xref py py-func docutils literal notranslate"><span class="pre">write_dataset()</span></code></a> accepts.</p></li>
+<li><p><strong>schema</strong> (<em>Optional</em><em>[</em><em>pa.Schema</em><em>]</em><em>, </em><em>default None</em>) – The schema of the data. This only needs to be supplied whenever the data
+source is some kind of generator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A formatted string representation of the plan analysis with metrics.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pyarrow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">([</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;alice&#39;</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">,</span> <span class="s1">&#39;charlie&#39;</span><span class="p">]),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">300.0</span><span class="p">])</span>
+<span class="gp">... </span><span class="p">],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">write_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;memory://analyze_dataset&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new_data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">([</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;updated_alice&quot;</span><span class="p">,</span> <span class="s2">&quot;david&quot;</span><span class="p">]),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">150.0</span><span class="p">,</span> <span class="mf">400.0</span><span class="p">])</span>
+<span class="gp">... </span><span class="p">],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;score&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">builder</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">merge_insert</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">builder</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">when_matched_update_all</span><span class="p">()</span><span class="o">.</span><span class="n">when_not_matched_insert_all</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">analysis</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">analyze_plan</span><span class="p">(</span><span class="n">new_data</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">analysis</span><span class="p">)</span>
+<span class="go">    MergeInsert: on=[id], ..., metrics=[..., bytes_written=..., ...]</span>
+<span class="go">      CoalescePartitionsExec, metrics=[output_rows=..., elapsed_compute=...]</span>
+<span class="go">        ProjectionExec: expr=[_rowaddr@1 as _rowaddr, ...], metrics=[...]</span>
+<span class="go">          ProjectionExec: expr=[id@1 IS NOT NULL as __common_expr_1, ...], ...</span>
+<span class="go">            CoalesceBatchesExec: ..., metrics=[...]</span>
+<span class="go">              HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
+<span class="go">                LanceRead: ..., metrics=[..., bytes_read=..., ...]</span>
+<span class="go">                RepartitionExec: ...</span>
+<span class="go">                  StreamingTableExec: ..., metrics=[]</span>
+</pre></div>
+</div>
+<p>The two key parts of the plan analysis are LanceRead and MergeInsert.
+LanceRead scans join keys and columns in conditions. MergeInsert writes
+data files to storage.</p>
+<p>Key metrics in MergeInsert operations:
+- bytes_written: total bytes written to storage
+- num_files_written: number of new data files created
+- num_inserted_rows: rows added that didn’t match existing data
+- num_updated_rows: existing rows that were updated
+- num_deleted_rows: rows removed (when using delete conditions)</p>
+<p>Key metrics in LanceRead operations:
+- bytes_read: bytes read from storage
+- fragments_scanned: number of data fragments accessed
+- rows_scanned: total rows examined during the scan
+- iops: number of I/O operations performed
+- requests: number of storage requests made</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="lance.MergeInsertBuilder.conflict_retries">
 <span class="sig-name descname"><span class="pre">conflict_retries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_retries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lance.dataset.MergeInsertBuilder" title="lance.dataset.MergeInsertBuilder"><span class="pre">MergeInsertBuilder</span></a></span></span><a class="headerlink" href="#lance.MergeInsertBuilder.conflict_retries" title="Link to this definition"></a></dt>
 <dd><p>Set number of times to retry the operation if there is contention.</p>
@@ -3847,6 +3930,75 @@ source is some kind of generator.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.MergeInsertBuilder.explain_plan">
+<span class="sig-name descname"><span class="pre">explain_plan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.Schema.html#pyarrow.Schema" title="(in Apache Arrow v21.0.0)"><span class="pre">Schema</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#lance.MergeInsertBuilder.explain_plan" title="Link to this definition"></a></dt>
+<dd><p>Generate the execution plan for the merge insert operation.</p>
+<p>This method creates the execution plan that would be used for the given
+source schema and returns it as a formatted string for debugging and
+analysis purposes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>schema</strong> (<em>Optional</em><em>[</em><em>pa.Schema</em><em>]</em><em>, </em><em>default None</em>) – The schema of the source data that would be merged into the dataset.
+If None, defaults to the dataset’s schema. This determines the columns
+available and their types, which affects the generated execution plan.</p></li>
+<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – If True, provides more detailed information in the plan output.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A formatted string representation of the execution plan.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pyarrow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">([</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;alice&#39;</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">,</span> <span class="s1">&#39;charlie&#39;</span><span class="p">]),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">300.0</span><span class="p">])</span>
+<span class="gp">... </span><span class="p">],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">write_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;memory://test_dataset&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Using default dataset schema</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">builder</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">merge_insert</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">builder</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">when_matched_update_all</span><span class="p">()</span><span class="o">.</span><span class="n">when_not_matched_insert_all</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plan</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">explain_plan</span><span class="p">()</span>  <span class="c1"># Uses dataset schema</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">plan</span><span class="p">)</span>
+<span class="go">MergeInsert: on=[id], when_matched=UpdateAll, when_not_matched=InsertAll, ...</span>
+<span class="go">  CoalescePartitionsExec</span>
+<span class="go">    ProjectionExec: expr=[_rowaddr@1 as _rowaddr, id@2 as id, ...]</span>
+<span class="go">      ProjectionExec: expr=[id@1 IS NOT NULL as __common_expr_1, ...]</span>
+<span class="go">        CoalesceBatchesExec: target_batch_size=...</span>
+<span class="go">          HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
+<span class="go">            LanceRead: uri=test_dataset/data, projection=[id], ...</span>
+<span class="go">            RepartitionExec: ...</span>
+<span class="go">              StreamingTableExec: partition_sizes=1, ...</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Or with explicit schema</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">source_schema</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">schema</span><span class="p">([</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="n">pa</span><span class="o">.</span><span class="n">int64</span><span class="p">()),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">pa</span><span class="o">.</span><span class="n">string</span><span class="p">()),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="s2">&quot;score&quot;</span><span class="p">,</span> <span class="n">pa</span><span class="o">.</span><span class="n">float64</span><span class="p">())</span>
+<span class="gp">... </span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plan</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">explain_plan</span><span class="p">(</span><span class="n">source_schema</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">plan</span><span class="p">)</span>
+<span class="go">MergeInsert: on=[id], when_matched=UpdateAll, when_not_matched=InsertAll, ...</span>
+<span class="go">  CoalescePartitionsExec</span>
+<span class="go">    ProjectionExec: expr=[_rowaddr@1 as _rowaddr, id@2 as id, ...]</span>
+<span class="go">      ProjectionExec: expr=[id@1 IS NOT NULL as __common_expr_1, ...]</span>
+<span class="go">        CoalesceBatchesExec: target_batch_size=...</span>
+<span class="go">          HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
+<span class="go">            ...</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -6754,6 +6906,85 @@ those fields.</p>
 <dt class="sig sig-object py" id="lance.dataset.MergeInsertBuilder">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lance.dataset.</span></span><span class="sig-name descname"><span class="pre">MergeInsertBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.MergeInsertBuilder" title="Link to this definition"></a></dt>
 <dd><dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.MergeInsertBuilder.analyze_plan">
+<span class="sig-name descname"><span class="pre">analyze_plan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ReaderLike</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pa.Schema</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#lance.dataset.MergeInsertBuilder.analyze_plan" title="Link to this definition"></a></dt>
+<dd><p>Generate the execution plan and analyze its performance with real data.</p>
+<p>This method creates the execution plan using the provided source data,
+executes it to collect performance metrics, and returns the analysis
+as a formatted string. This is useful for understanding the actual
+performance characteristics of the merge insert operation with your data.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This method executes the merge insert operation to collect metrics
+but <strong>does not commit the changes</strong>. While data files may be written
+to storage during execution, they will not be referenced by any dataset
+version and the dataset remains unchanged. This is intended for
+performance analysis only.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_obj</strong> (<em>ReaderLike</em>) – The source data that would be merged into the dataset. This parameter
+can be any source of data (e.g. table / dataset) that
+<a class="reference internal" href="#lance.write_dataset" title="lance.write_dataset"><code class="xref py py-func docutils literal notranslate"><span class="pre">write_dataset()</span></code></a> accepts.</p></li>
+<li><p><strong>schema</strong> (<em>Optional</em><em>[</em><em>pa.Schema</em><em>]</em><em>, </em><em>default None</em>) – The schema of the data. This only needs to be supplied whenever the data
+source is some kind of generator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A formatted string representation of the plan analysis with metrics.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pyarrow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">([</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;alice&#39;</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">,</span> <span class="s1">&#39;charlie&#39;</span><span class="p">]),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">300.0</span><span class="p">])</span>
+<span class="gp">... </span><span class="p">],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">write_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;memory://analyze_dataset&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new_data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">([</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;updated_alice&quot;</span><span class="p">,</span> <span class="s2">&quot;david&quot;</span><span class="p">]),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">150.0</span><span class="p">,</span> <span class="mf">400.0</span><span class="p">])</span>
+<span class="gp">... </span><span class="p">],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;score&quot;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">builder</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">merge_insert</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">builder</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">when_matched_update_all</span><span class="p">()</span><span class="o">.</span><span class="n">when_not_matched_insert_all</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">analysis</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">analyze_plan</span><span class="p">(</span><span class="n">new_data</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">analysis</span><span class="p">)</span>
+<span class="go">    MergeInsert: on=[id], ..., metrics=[..., bytes_written=..., ...]</span>
+<span class="go">      CoalescePartitionsExec, metrics=[output_rows=..., elapsed_compute=...]</span>
+<span class="go">        ProjectionExec: expr=[_rowaddr@1 as _rowaddr, ...], metrics=[...]</span>
+<span class="go">          ProjectionExec: expr=[id@1 IS NOT NULL as __common_expr_1, ...], ...</span>
+<span class="go">            CoalesceBatchesExec: ..., metrics=[...]</span>
+<span class="go">              HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
+<span class="go">                LanceRead: ..., metrics=[..., bytes_read=..., ...]</span>
+<span class="go">                RepartitionExec: ...</span>
+<span class="go">                  StreamingTableExec: ..., metrics=[]</span>
+</pre></div>
+</div>
+<p>The two key parts of the plan analysis are LanceRead and MergeInsert.
+LanceRead scans join keys and columns in conditions. MergeInsert writes
+data files to storage.</p>
+<p>Key metrics in MergeInsert operations:
+- bytes_written: total bytes written to storage
+- num_files_written: number of new data files created
+- num_inserted_rows: rows added that didn’t match existing data
+- num_updated_rows: existing rows that were updated
+- num_deleted_rows: rows removed (when using delete conditions)</p>
+<p>Key metrics in LanceRead operations:
+- bytes_read: bytes read from storage
+- fragments_scanned: number of data fragments accessed
+- rows_scanned: total rows examined during the scan
+- iops: number of I/O operations performed
+- requests: number of storage requests made</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="lance.dataset.MergeInsertBuilder.conflict_retries">
 <span class="sig-name descname"><span class="pre">conflict_retries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_retries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#lance.dataset.MergeInsertBuilder" title="lance.dataset.MergeInsertBuilder"><span class="pre">MergeInsertBuilder</span></a></span></span><a class="headerlink" href="#lance.dataset.MergeInsertBuilder.conflict_retries" title="Link to this definition"></a></dt>
 <dd><p>Set number of times to retry the operation if there is contention.</p>
@@ -6801,6 +7032,75 @@ source is some kind of generator.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.MergeInsertBuilder.explain_plan">
+<span class="sig-name descname"><span class="pre">explain_plan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.Schema.html#pyarrow.Schema" title="(in Apache Arrow v21.0.0)"><span class="pre">Schema</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#lance.dataset.MergeInsertBuilder.explain_plan" title="Link to this definition"></a></dt>
+<dd><p>Generate the execution plan for the merge insert operation.</p>
+<p>This method creates the execution plan that would be used for the given
+source schema and returns it as a formatted string for debugging and
+analysis purposes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>schema</strong> (<em>Optional</em><em>[</em><em>pa.Schema</em><em>]</em><em>, </em><em>default None</em>) – The schema of the source data that would be merged into the dataset.
+If None, defaults to the dataset’s schema. This determines the columns
+available and their types, which affects the generated execution plan.</p></li>
+<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – If True, provides more detailed information in the plan output.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A formatted string representation of the execution plan.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pyarrow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">([</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;alice&#39;</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">,</span> <span class="s1">&#39;charlie&#39;</span><span class="p">]),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">200.0</span><span class="p">,</span> <span class="mf">300.0</span><span class="p">])</span>
+<span class="gp">... </span><span class="p">],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;score&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">write_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;memory://test_dataset&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Using default dataset schema</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">builder</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">merge_insert</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">builder</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">when_matched_update_all</span><span class="p">()</span><span class="o">.</span><span class="n">when_not_matched_insert_all</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plan</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">explain_plan</span><span class="p">()</span>  <span class="c1"># Uses dataset schema</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">plan</span><span class="p">)</span>
+<span class="go">MergeInsert: on=[id], when_matched=UpdateAll, when_not_matched=InsertAll, ...</span>
+<span class="go">  CoalescePartitionsExec</span>
+<span class="go">    ProjectionExec: expr=[_rowaddr@1 as _rowaddr, id@2 as id, ...]</span>
+<span class="go">      ProjectionExec: expr=[id@1 IS NOT NULL as __common_expr_1, ...]</span>
+<span class="go">        CoalesceBatchesExec: target_batch_size=...</span>
+<span class="go">          HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
+<span class="go">            LanceRead: uri=test_dataset/data, projection=[id], ...</span>
+<span class="go">            RepartitionExec: ...</span>
+<span class="go">              StreamingTableExec: partition_sizes=1, ...</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Or with explicit schema</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">source_schema</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">schema</span><span class="p">([</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="n">pa</span><span class="o">.</span><span class="n">int64</span><span class="p">()),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">pa</span><span class="o">.</span><span class="n">string</span><span class="p">()),</span>
+<span class="gp">... </span>    <span class="n">pa</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="s2">&quot;score&quot;</span><span class="p">,</span> <span class="n">pa</span><span class="o">.</span><span class="n">float64</span><span class="p">())</span>
+<span class="gp">... </span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plan</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">explain_plan</span><span class="p">(</span><span class="n">source_schema</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">plan</span><span class="p">)</span>
+<span class="go">MergeInsert: on=[id], when_matched=UpdateAll, when_not_matched=InsertAll, ...</span>
+<span class="go">  CoalescePartitionsExec</span>
+<span class="go">    ProjectionExec: expr=[_rowaddr@1 as _rowaddr, id@2 as id, ...]</span>
+<span class="go">      ProjectionExec: expr=[id@1 IS NOT NULL as __common_expr_1, ...]</span>
+<span class="go">        CoalesceBatchesExec: target_batch_size=...</span>
+<span class="go">          HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
+<span class="go">            ...</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
