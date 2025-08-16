@@ -1627,14 +1627,22 @@ that use scalar indices will either have a <code class="docutils literal notrans
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lance.LanceDataset.delete">
-<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.dataset.Expression.html#pyarrow.dataset.Expression" title="(in Apache Arrow v21.0.0)"><span class="pre">Expression</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.LanceDataset.delete" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.dataset.Expression.html#pyarrow.dataset.Expression" title="(in Apache Arrow v21.0.0)"><span class="pre">Expression</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">conflict_retries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retry_timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.13)"><span class="pre">timedelta</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">datetime.timedelta(seconds=30)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.LanceDataset.delete" title="Link to this definition"></a></dt>
 <dd><p>Delete rows from the dataset.</p>
 <p>This marks rows as deleted, but does not physically remove them from the
 files. This keeps the existing indexes still valid.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>predicate</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em> or </em><em>pa.compute.Expression</em>) – The predicate to use to select rows to delete. May either be a SQL
-string or a pyarrow Expression.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predicate</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em> or </em><em>pa.compute.Expression</em>) – The predicate to use to select rows to delete. May either be a SQL
+string or a pyarrow Expression.</p></li>
+<li><p><strong>conflict_retries</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><em>optional</em>) – Number of times to retry the operation if there is contention.
+Default is 10.</p></li>
+<li><p><strong>retry_timeout</strong> (<em>timedelta</em><em>, </em><em>optional</em>) – The timeout used to limit retries. This is the maximum time to spend on
+the operation before giving up. At least one attempt will be made,
+regardless of how long it takes to complete. Subsequent attempts will be
+cancelled once this timeout is reached. Default is 30 seconds.</p></li>
+</ul>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
@@ -5227,14 +5235,22 @@ that use scalar indices will either have a <code class="docutils literal notrans
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lance.dataset.LanceDataset.delete">
-<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.dataset.Expression.html#pyarrow.dataset.Expression" title="(in Apache Arrow v21.0.0)"><span class="pre">Expression</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceDataset.delete" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.dataset.Expression.html#pyarrow.dataset.Expression" title="(in Apache Arrow v21.0.0)"><span class="pre">Expression</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">conflict_retries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retry_timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.13)"><span class="pre">timedelta</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">datetime.timedelta(seconds=30)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceDataset.delete" title="Link to this definition"></a></dt>
 <dd><p>Delete rows from the dataset.</p>
 <p>This marks rows as deleted, but does not physically remove them from the
 files. This keeps the existing indexes still valid.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>predicate</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em> or </em><em>pa.compute.Expression</em>) – The predicate to use to select rows to delete. May either be a SQL
-string or a pyarrow Expression.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predicate</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em> or </em><em>pa.compute.Expression</em>) – The predicate to use to select rows to delete. May either be a SQL
+string or a pyarrow Expression.</p></li>
+<li><p><strong>conflict_retries</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><em>optional</em>) – Number of times to retry the operation if there is contention.
+Default is 10.</p></li>
+<li><p><strong>retry_timeout</strong> (<em>timedelta</em><em>, </em><em>optional</em>) – The timeout used to limit retries. This is the maximum time to spend on
+the operation before giving up. At least one attempt will be made,
+regardless of how long it takes to complete. Subsequent attempts will be
+cancelled once this timeout is reached. Default is 30 seconds.</p></li>
+</ul>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
