@@ -3880,8 +3880,8 @@ source is some kind of generator.</p></li>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">analysis</span><span class="p">)</span>
 <span class="go">    MergeInsert: on=[id], ..., metrics=[..., bytes_written=..., ...]</span>
 <span class="go">      CoalescePartitionsExec, metrics=[output_rows=..., elapsed_compute=...]</span>
-<span class="go">        ProjectionExec: expr=[_rowaddr@1 as _rowaddr, ...], metrics=[...]</span>
-<span class="go">          ProjectionExec: expr=[id@1 IS NOT NULL as __common_expr_1, ...], ...</span>
+<span class="go">        ProjectionExec: expr=[_rowid@1 as _rowid, ...], metrics=[...]</span>
+<span class="go">          ProjectionExec: expr=[id@2 IS NOT NULL as __common_expr_1, ...], ...</span>
 <span class="go">            CoalesceBatchesExec: ..., metrics=[...]</span>
 <span class="go">              HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
 <span class="go">                LanceRead: ..., metrics=[..., bytes_read=..., ...]</span>
@@ -3997,8 +3997,8 @@ available and their types, which affects the generated execution plan.</p></li>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">plan</span><span class="p">)</span>
 <span class="go">MergeInsert: on=[id], when_matched=UpdateAll, when_not_matched=InsertAll, ...</span>
 <span class="go">  CoalescePartitionsExec</span>
-<span class="go">    ProjectionExec: expr=[_rowaddr@1 as _rowaddr, id@2 as id, ...]</span>
-<span class="go">      ProjectionExec: expr=[id@1 IS NOT NULL as __common_expr_1, ...]</span>
+<span class="go">    ProjectionExec: expr=[_rowid@1 as _rowid, _rowaddr@2 as _rowaddr, ...]</span>
+<span class="go">      ProjectionExec: expr=[id@2 IS NOT NULL as __common_expr_1, ...]</span>
 <span class="go">        CoalesceBatchesExec: target_batch_size=...</span>
 <span class="go">          HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
 <span class="go">            LanceRead: uri=test_dataset/data, projection=[id], ...</span>
@@ -4016,8 +4016,8 @@ available and their types, which affects the generated execution plan.</p></li>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">plan</span><span class="p">)</span>
 <span class="go">MergeInsert: on=[id], when_matched=UpdateAll, when_not_matched=InsertAll, ...</span>
 <span class="go">  CoalescePartitionsExec</span>
-<span class="go">    ProjectionExec: expr=[_rowaddr@1 as _rowaddr, id@2 as id, ...]</span>
-<span class="go">      ProjectionExec: expr=[id@1 IS NOT NULL as __common_expr_1, ...]</span>
+<span class="go">    ProjectionExec: expr=[_rowid@1 as _rowid, _rowaddr@2 as _rowaddr, ...]</span>
+<span class="go">      ProjectionExec: expr=[id@2 IS NOT NULL as __common_expr_1, ...]</span>
 <span class="go">        CoalesceBatchesExec: target_batch_size=...</span>
 <span class="go">          HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
 <span class="go">            ...</span>
@@ -7018,8 +7018,8 @@ source is some kind of generator.</p></li>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">analysis</span><span class="p">)</span>
 <span class="go">    MergeInsert: on=[id], ..., metrics=[..., bytes_written=..., ...]</span>
 <span class="go">      CoalescePartitionsExec, metrics=[output_rows=..., elapsed_compute=...]</span>
-<span class="go">        ProjectionExec: expr=[_rowaddr@1 as _rowaddr, ...], metrics=[...]</span>
-<span class="go">          ProjectionExec: expr=[id@1 IS NOT NULL as __common_expr_1, ...], ...</span>
+<span class="go">        ProjectionExec: expr=[_rowid@1 as _rowid, ...], metrics=[...]</span>
+<span class="go">          ProjectionExec: expr=[id@2 IS NOT NULL as __common_expr_1, ...], ...</span>
 <span class="go">            CoalesceBatchesExec: ..., metrics=[...]</span>
 <span class="go">              HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
 <span class="go">                LanceRead: ..., metrics=[..., bytes_read=..., ...]</span>
@@ -7135,8 +7135,8 @@ available and their types, which affects the generated execution plan.</p></li>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">plan</span><span class="p">)</span>
 <span class="go">MergeInsert: on=[id], when_matched=UpdateAll, when_not_matched=InsertAll, ...</span>
 <span class="go">  CoalescePartitionsExec</span>
-<span class="go">    ProjectionExec: expr=[_rowaddr@1 as _rowaddr, id@2 as id, ...]</span>
-<span class="go">      ProjectionExec: expr=[id@1 IS NOT NULL as __common_expr_1, ...]</span>
+<span class="go">    ProjectionExec: expr=[_rowid@1 as _rowid, _rowaddr@2 as _rowaddr, ...]</span>
+<span class="go">      ProjectionExec: expr=[id@2 IS NOT NULL as __common_expr_1, ...]</span>
 <span class="go">        CoalesceBatchesExec: target_batch_size=...</span>
 <span class="go">          HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
 <span class="go">            LanceRead: uri=test_dataset/data, projection=[id], ...</span>
@@ -7154,8 +7154,8 @@ available and their types, which affects the generated execution plan.</p></li>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">plan</span><span class="p">)</span>
 <span class="go">MergeInsert: on=[id], when_matched=UpdateAll, when_not_matched=InsertAll, ...</span>
 <span class="go">  CoalescePartitionsExec</span>
-<span class="go">    ProjectionExec: expr=[_rowaddr@1 as _rowaddr, id@2 as id, ...]</span>
-<span class="go">      ProjectionExec: expr=[id@1 IS NOT NULL as __common_expr_1, ...]</span>
+<span class="go">    ProjectionExec: expr=[_rowid@1 as _rowid, _rowaddr@2 as _rowaddr, ...]</span>
+<span class="go">      ProjectionExec: expr=[id@2 IS NOT NULL as __common_expr_1, ...]</span>
 <span class="go">        CoalesceBatchesExec: target_batch_size=...</span>
 <span class="go">          HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
 <span class="go">            ...</span>
