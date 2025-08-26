@@ -964,7 +964,7 @@ column name.</p></li>
 <li><p><strong>train</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default True</em>) – If True, the index will be trained on the data to determine optimal
 structure. If False, an empty index will be created that can be
 populated later.</p></li>
-<li><p><strong>with_position</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default True</em>) – This is for the <code class="docutils literal notranslate"><span class="pre">INVERTED</span></code> index. If True, the index will store the
+<li><p><strong>with_position</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – This is for the <code class="docutils literal notranslate"><span class="pre">INVERTED</span></code> index. If True, the index will store the
 positions of the words in the document, so that you can conduct phrase
 query. This will significantly increase the index size.
 It won’t impact the performance of non-phrase queries even if it is set to
@@ -980,11 +980,11 @@ and stop words. This is only used when <cite>stem</cite> or <cite>remove_stop_wo
 Any token longer than this will be removed.</p></li>
 <li><p><strong>lower_case</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default True</em>) – This is for the <code class="docutils literal notranslate"><span class="pre">INVERTED</span></code> index. If True, the index will convert all
 text to lowercase.</p></li>
-<li><p><strong>stem</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – This is for the <code class="docutils literal notranslate"><span class="pre">INVERTED</span></code> index. If True, the index will stem the
+<li><p><strong>stem</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default True</em>) – This is for the <code class="docutils literal notranslate"><span class="pre">INVERTED</span></code> index. If True, the index will stem the
 tokens.</p></li>
-<li><p><strong>remove_stop_words</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – This is for the <code class="docutils literal notranslate"><span class="pre">INVERTED</span></code> index. If True, the index will remove
+<li><p><strong>remove_stop_words</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default True</em>) – This is for the <code class="docutils literal notranslate"><span class="pre">INVERTED</span></code> index. If True, the index will remove
 stop words.</p></li>
-<li><p><strong>ascii_folding</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – This is for the <code class="docutils literal notranslate"><span class="pre">INVERTED</span></code> index. If True, the index will convert
+<li><p><strong>ascii_folding</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default True</em>) – This is for the <code class="docutils literal notranslate"><span class="pre">INVERTED</span></code> index. If True, the index will convert
 non-ascii characters to ascii characters if possible.
 This would remove accents like “é” -&gt; “e”.</p></li>
 </ul>
