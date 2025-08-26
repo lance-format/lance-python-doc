@@ -770,21 +770,21 @@ All columns are fetched if None or unspecified.</p></li>
 <p>Instead of loading large binary blob data into memory before processing it,
 this API allows you to open binary blob data as a regular Python file-like
 object. For more details, see <a class="reference internal" href="all-modules.html#lance.BlobFile" title="lance.BlobFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">lance.BlobFile</span></code></a>.</p>
-<p>Exactly one of ids, addresses, or indices must be specified.
-:param blob_column: The name of the blob column to select.
-:type blob_column: str
-:param ids: row IDs to select in the dataset.
-:type ids: Integer Array or array-like
-:param addresses: The (unstable) row addresses to select in the dataset.
-:type addresses: Integer Array or array-like
-:param indices: The offset / indices of the row in the dataset.
-:type indices: Integer Array or array-like</p>
+<p>Exactly one of ids, addresses, or indices must be specified.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>blob_files</strong></p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blob_column</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The name of the blob column to select.</p></li>
+<li><p><strong>ids</strong> (<em>Integer Array</em><em> or </em><em>array-like</em>) – row IDs to select in the dataset.</p></li>
+<li><p><strong>addresses</strong> (<em>Integer Array</em><em> or </em><em>array-like</em>) – The (unstable) row addresses to select in the dataset.</p></li>
+<li><p><strong>indices</strong> (<em>Integer Array</em><em> or </em><em>array-like</em>) – The offset / indices of the row in the dataset.</p></li>
+</ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>List[<a class="reference internal" href="all-modules.html#lance.BlobFile" title="lance.BlobFile">BlobFile</a>]</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>blob_files</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="all-modules.html#lance.BlobFile" title="lance.BlobFile">BlobFile</a>]</p>
 </dd>
 </dl>
 </dd></dl>
