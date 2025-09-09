@@ -4013,10 +4013,11 @@ source is some kind of generator.</p></li>
 <span class="go">    MergeInsert: on=[id], ..., metrics=[..., bytes_written=..., ...], cumulative_cpu=...</span>
 <span class="go">      CoalescePartitionsExec, metrics=[output_rows=..., elapsed_compute=...], cumulative_cpu=...</span>
 <span class="go">        ProjectionExec: expr=[_rowid@1 as _rowid, ...], metrics=[...], cumulative_cpu=...</span>
-<span class="go">          ProjectionExec: expr=[id@2 IS NOT NULL as __common_expr_1, ...], ...</span>
+<span class="go">          ProjectionExec: expr=[id@2 IS NOT NULL as __common_expr_1, ...], metrics=[...], cumulative_cpu=...</span>
 <span class="go">            CoalesceBatchesExec: ..., metrics=[...], cumulative_cpu=...</span>
 <span class="go">              HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
-<span class="go">                LanceRead: ..., metrics=[..., bytes_read=..., ...], cumulative_cpu=...</span>
+<span class="go">                CooperativeExec, metrics=[], cumulative_cpu=...</span>
+<span class="go">                  LanceRead: ..., metrics=[..., bytes_read=..., ...], cumulative_cpu=...</span>
 <span class="go">                RepartitionExec: ...</span>
 <span class="go">                  StreamingTableExec: ..., metrics=[], ...</span>
 </pre></div>
@@ -4133,7 +4134,8 @@ available and their types, which affects the generated execution plan.</p></li>
 <span class="go">      ProjectionExec: expr=[id@2 IS NOT NULL as __common_expr_1, ...]</span>
 <span class="go">        CoalesceBatchesExec: target_batch_size=...</span>
 <span class="go">          HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
-<span class="go">            LanceRead: uri=test_dataset/data, projection=[id], ...</span>
+<span class="go">            CooperativeExec</span>
+<span class="go">              LanceRead: uri=test_dataset/data, projection=[id], ...</span>
 <span class="go">            RepartitionExec: ...</span>
 <span class="go">              StreamingTableExec: partition_sizes=1, ...</span>
 </pre></div>
@@ -7189,10 +7191,11 @@ source is some kind of generator.</p></li>
 <span class="go">    MergeInsert: on=[id], ..., metrics=[..., bytes_written=..., ...], cumulative_cpu=...</span>
 <span class="go">      CoalescePartitionsExec, metrics=[output_rows=..., elapsed_compute=...], cumulative_cpu=...</span>
 <span class="go">        ProjectionExec: expr=[_rowid@1 as _rowid, ...], metrics=[...], cumulative_cpu=...</span>
-<span class="go">          ProjectionExec: expr=[id@2 IS NOT NULL as __common_expr_1, ...], ...</span>
+<span class="go">          ProjectionExec: expr=[id@2 IS NOT NULL as __common_expr_1, ...], metrics=[...], cumulative_cpu=...</span>
 <span class="go">            CoalesceBatchesExec: ..., metrics=[...], cumulative_cpu=...</span>
 <span class="go">              HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
-<span class="go">                LanceRead: ..., metrics=[..., bytes_read=..., ...], cumulative_cpu=...</span>
+<span class="go">                CooperativeExec, metrics=[], cumulative_cpu=...</span>
+<span class="go">                  LanceRead: ..., metrics=[..., bytes_read=..., ...], cumulative_cpu=...</span>
 <span class="go">                RepartitionExec: ...</span>
 <span class="go">                  StreamingTableExec: ..., metrics=[], ...</span>
 </pre></div>
@@ -7309,7 +7312,8 @@ available and their types, which affects the generated execution plan.</p></li>
 <span class="go">      ProjectionExec: expr=[id@2 IS NOT NULL as __common_expr_1, ...]</span>
 <span class="go">        CoalesceBatchesExec: target_batch_size=...</span>
 <span class="go">          HashJoinExec: mode=CollectLeft, join_type=Right, ...</span>
-<span class="go">            LanceRead: uri=test_dataset/data, projection=[id], ...</span>
+<span class="go">            CooperativeExec</span>
+<span class="go">              LanceRead: uri=test_dataset/data, projection=[id], ...</span>
 <span class="go">            RepartitionExec: ...</span>
 <span class="go">              StreamingTableExec: partition_sizes=1, ...</span>
 </pre></div>
