@@ -266,10 +266,13 @@
 <li class="toctree-l4"><a class="reference internal" href="#lance.LanceOperation.Update.updated_fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.updated_fragments</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.LanceOperation.Update.new_fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.new_fragments</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.LanceOperation.Update.fields_modified"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_modified</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id21"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_modified</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id22"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.new_fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id23"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.removed_fragment_ids</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id24"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.updated_fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lance.LanceOperation.Update.fields_for_preserving_frag_bitmap"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_for_preserving_frag_bitmap</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_for_preserving_frag_bitmap</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_modified</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id23"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.new_fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id24"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.removed_fragment_ids</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lance.LanceOperation.Update.update_mode"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.update_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id25"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.updated_fragments</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -455,7 +458,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#lance.dataset.LanceOperation"><code class="docutils literal notranslate"><span class="pre">LanceOperation</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.Append"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Append</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Append.fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Append.fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id34"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Append.fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id35"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Append.fragments</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.BaseOperation"><code class="docutils literal notranslate"><span class="pre">LanceOperation.BaseOperation</span></code></a></li>
@@ -477,28 +480,28 @@
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Delete.updated_fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.updated_fragments</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Delete.deleted_fragment_ids"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.deleted_fragment_ids</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Delete.predicate"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.predicate</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id35"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.deleted_fragment_ids</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id36"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.predicate</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id37"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.updated_fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id36"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.deleted_fragment_ids</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id37"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.predicate</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id38"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.updated_fragments</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.Merge"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Merge.fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.fragments</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Merge.schema"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.schema</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id38"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id39"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.schema</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id39"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id40"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.schema</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.Overwrite"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Overwrite.new_schema"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.new_schema</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Overwrite.fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id40"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id41"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.new_schema</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id41"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id42"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.new_schema</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.Project"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Project</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Project.schema"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Project.schema</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id42"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Project.schema</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id43"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Project.schema</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.Restore"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Restore</span></code></a><ul>
@@ -508,8 +511,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.Rewrite"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Rewrite.groups"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.groups</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Rewrite.rewritten_indices"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.rewritten_indices</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id43"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.groups</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id44"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.rewritten_indices</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id44"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.groups</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id45"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.rewritten_indices</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.RewriteGroup"><code class="docutils literal notranslate"><span class="pre">LanceOperation.RewriteGroup</span></code></a><ul>
@@ -530,10 +533,13 @@
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Update.updated_fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.updated_fragments</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Update.new_fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.new_fragments</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Update.fields_modified"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_modified</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id45"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_modified</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id46"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.new_fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id47"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.removed_fragment_ids</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id48"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.updated_fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Update.fields_for_preserving_frag_bitmap"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_for_preserving_frag_bitmap</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id46"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_for_preserving_frag_bitmap</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id47"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_modified</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id48"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.new_fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id49"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.removed_fragment_ids</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Update.update_mode"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.update_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id50"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.updated_fragments</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -663,13 +669,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.DataFile.file_minor_version"><code class="docutils literal notranslate"><span class="pre">DataFile.file_minor_version</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.DataFile.file_size_bytes"><code class="docutils literal notranslate"><span class="pre">DataFile.file_size_bytes</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.DataFile.base_id"><code class="docutils literal notranslate"><span class="pre">DataFile.base_id</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id49"><code class="docutils literal notranslate"><span class="pre">DataFile.column_indices</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id51"><code class="docutils literal notranslate"><span class="pre">DataFile.column_indices</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.DataFile.field_ids"><code class="docutils literal notranslate"><span class="pre">DataFile.field_ids()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id50"><code class="docutils literal notranslate"><span class="pre">DataFile.fields</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id51"><code class="docutils literal notranslate"><span class="pre">DataFile.file_major_version</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id52"><code class="docutils literal notranslate"><span class="pre">DataFile.file_minor_version</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id53"><code class="docutils literal notranslate"><span class="pre">DataFile.file_size_bytes</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id54"><code class="docutils literal notranslate"><span class="pre">DataFile.path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id52"><code class="docutils literal notranslate"><span class="pre">DataFile.fields</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id53"><code class="docutils literal notranslate"><span class="pre">DataFile.file_major_version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id54"><code class="docutils literal notranslate"><span class="pre">DataFile.file_minor_version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id55"><code class="docutils literal notranslate"><span class="pre">DataFile.file_size_bytes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id56"><code class="docutils literal notranslate"><span class="pre">DataFile.path</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#lance.fragment.DeletionFile"><code class="docutils literal notranslate"><span class="pre">DeletionFile</span></code></a><ul>
@@ -691,14 +697,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.FragmentMetadata.deletion_file"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.deletion_file</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.FragmentMetadata.row_id_meta"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.row_id_meta</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.FragmentMetadata.data_files"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.data_files()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id55"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.deletion_file</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id56"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.files</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id57"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.deletion_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id58"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.files</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.FragmentMetadata.from_json"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.from_json()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id57"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id59"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.id</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.FragmentMetadata.num_deletions"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.num_deletions</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.FragmentMetadata.num_rows"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.num_rows</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id58"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.physical_rows</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id59"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.row_id_meta</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id60"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.physical_rows</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id61"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.row_id_meta</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.FragmentMetadata.to_json"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.to_json()</span></code></a></li>
 </ul>
 </li>
@@ -3756,7 +3762,7 @@ or more files and indices.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lance.LanceOperation.Update">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">removed_fragment_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_fragments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_fragments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields_modified</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.LanceOperation.Update" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">removed_fragment_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_fragments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_fragments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields_modified</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields_for_preserving_frag_bitmap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.LanceOperation.Update" title="Link to this definition"></a></dt>
 <dd><p>Operation that updates rows in the dataset.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lance.LanceOperation.Update.removed_fragment_ids">
@@ -3805,23 +3811,45 @@ those fields.</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="lance.LanceOperation.Update.fields_for_preserving_frag_bitmap">
+<span class="sig-name descname"><span class="pre">fields_for_preserving_frag_bitmap</span></span><a class="headerlink" href="#lance.LanceOperation.Update.fields_for_preserving_frag_bitmap" title="Link to this definition"></a></dt>
+<dd><p>The fields that used to judge whether to preserve the new frag’s id into
+the frag bitmap of the specified indices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="id21">
-<span class="sig-name descname"><span class="pre">fields_modified</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id21" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fields_for_preserving_frag_bitmap</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id21" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="id22">
-<span class="sig-name descname"><span class="pre">new_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id22" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fields_modified</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id22" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="id23">
-<span class="sig-name descname"><span class="pre">removed_fragment_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id23" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">new_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id23" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="id24">
-<span class="sig-name descname"><span class="pre">updated_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id24" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">removed_fragment_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id24" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.LanceOperation.Update.update_mode">
+<span class="sig-name descname"><span class="pre">update_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#lance.LanceOperation.Update.update_mode" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id25">
+<span class="sig-name descname"><span class="pre">updated_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id25" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -5972,7 +6000,7 @@ this will result in wasted I/O.</p>
 <dt class="sig sig-object py" id="lance.dataset.LanceDataset.replace_schema">
 <span class="sig-name descname"><span class="pre">replace_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.Schema.html#pyarrow.Schema" title="(in Apache Arrow v21.0.0)"><span class="pre">Schema</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceDataset.replace_schema" title="Link to this definition"></a></dt>
 <dd><p>Not implemented (just override pyarrow dataset to prevent segfault)</p>
-<p>See <a href="#id28"><span class="problematic" id="id29">:py:method:`replace_schema_metadata`</span></a> or <a href="#id30"><span class="problematic" id="id31">:py:method:`replace_field_metadata`</span></a></p>
+<p>See <a href="#id29"><span class="problematic" id="id30">:py:method:`replace_schema_metadata`</span></a> or <a href="#id31"><span class="problematic" id="id32">:py:method:`replace_field_metadata`</span></a></p>
 </dd></dl>
 
 <dl class="py method">
@@ -6498,8 +6526,8 @@ method to create the new dataset.</p>
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id34">
-<span class="sig-name descname"><span class="pre">fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id34" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id35">
+<span class="sig-name descname"><span class="pre">fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id35" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -6636,18 +6664,18 @@ complete the deletion operation.</p>
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id35">
-<span class="sig-name descname"><span class="pre">deleted_fragment_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id35" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="id36">
-<span class="sig-name descname"><span class="pre">predicate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#id36" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">deleted_fragment_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id36" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="id37">
-<span class="sig-name descname"><span class="pre">updated_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id37" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">predicate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#id37" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id38">
+<span class="sig-name descname"><span class="pre">updated_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id38" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -6720,13 +6748,13 @@ the new columns based on the existing columns. Then use
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id38">
-<span class="sig-name descname"><span class="pre">fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id38" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id39">
+<span class="sig-name descname"><span class="pre">fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id39" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id39">
-<span class="sig-name descname"><span class="pre">schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">LanceSchema</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.Schema.html#pyarrow.Schema" title="(in Apache Arrow v21.0.0)"><span class="pre">Schema</span></a></em><a class="headerlink" href="#id39" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id40">
+<span class="sig-name descname"><span class="pre">schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">LanceSchema</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.Schema.html#pyarrow.Schema" title="(in Apache Arrow v21.0.0)"><span class="pre">Schema</span></a></em><a class="headerlink" href="#id40" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -6786,13 +6814,13 @@ schema to this class. Finally, pass the operation to the
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id40">
-<span class="sig-name descname"><span class="pre">fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id40" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id41">
+<span class="sig-name descname"><span class="pre">fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id41" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id41">
-<span class="sig-name descname"><span class="pre">new_schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">LanceSchema</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.Schema.html#pyarrow.Schema" title="(in Apache Arrow v21.0.0)"><span class="pre">Schema</span></a></em><a class="headerlink" href="#id41" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id42">
+<span class="sig-name descname"><span class="pre">new_schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">LanceSchema</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.Schema.html#pyarrow.Schema" title="(in Apache Arrow v21.0.0)"><span class="pre">Schema</span></a></em><a class="headerlink" href="#id42" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -6838,8 +6866,8 @@ Use this operator for drop column or rename/swap column.</p>
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id42">
-<span class="sig-name descname"><span class="pre">schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">LanceSchema</span></em><a class="headerlink" href="#id42" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id43">
+<span class="sig-name descname"><span class="pre">schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">LanceSchema</span></em><a class="headerlink" href="#id43" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -6887,13 +6915,13 @@ or more files and indices.</p>
 <p>This is an advanced API not intended for general use.</p>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id43">
-<span class="sig-name descname"><span class="pre">groups</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.dataset.LanceOperation.RewriteGroup" title="lance.dataset.LanceOperation.RewriteGroup"><span class="pre">LanceOperation.RewriteGroup</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id43" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id44">
+<span class="sig-name descname"><span class="pre">groups</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.dataset.LanceOperation.RewriteGroup" title="lance.dataset.LanceOperation.RewriteGroup"><span class="pre">LanceOperation.RewriteGroup</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id44" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id44">
-<span class="sig-name descname"><span class="pre">rewritten_indices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">LanceOperation.RewrfittenIndex</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id44" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id45">
+<span class="sig-name descname"><span class="pre">rewritten_indices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">LanceOperation.RewrfittenIndex</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id45" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -6947,7 +6975,7 @@ or more files and indices.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lance.dataset.LanceOperation.Update">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">removed_fragment_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_fragments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_fragments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields_modified</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceOperation.Update" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">removed_fragment_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_fragments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_fragments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields_modified</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields_for_preserving_frag_bitmap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceOperation.Update" title="Link to this definition"></a></dt>
 <dd><p>Operation that updates rows in the dataset.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lance.dataset.LanceOperation.Update.removed_fragment_ids">
@@ -6996,23 +7024,45 @@ those fields.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id45">
-<span class="sig-name descname"><span class="pre">fields_modified</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id45" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="lance.dataset.LanceOperation.Update.fields_for_preserving_frag_bitmap">
+<span class="sig-name descname"><span class="pre">fields_for_preserving_frag_bitmap</span></span><a class="headerlink" href="#lance.dataset.LanceOperation.Update.fields_for_preserving_frag_bitmap" title="Link to this definition"></a></dt>
+<dd><p>The fields that used to judge whether to preserve the new frag’s id into
+the frag bitmap of the specified indices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>]</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="id46">
-<span class="sig-name descname"><span class="pre">new_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id46" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fields_for_preserving_frag_bitmap</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id46" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="id47">
-<span class="sig-name descname"><span class="pre">removed_fragment_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id47" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fields_modified</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id47" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="id48">
-<span class="sig-name descname"><span class="pre">updated_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id48" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">new_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id48" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id49">
+<span class="sig-name descname"><span class="pre">removed_fragment_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id49" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.dataset.LanceOperation.Update.update_mode">
+<span class="sig-name descname"><span class="pre">update_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#lance.dataset.LanceOperation.Update.update_mode" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id50">
+<span class="sig-name descname"><span class="pre">updated_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id50" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -8189,8 +8239,8 @@ the same length as <cite>fields</cite>.</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id49">
-<span class="sig-name descname"><span class="pre">column_indices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id49" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id51">
+<span class="sig-name descname"><span class="pre">column_indices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id51" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -8199,28 +8249,28 @@ the same length as <cite>fields</cite>.</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id50">
-<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id50" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="id51">
-<span class="sig-name descname"><span class="pre">file_major_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#id51" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="id52">
-<span class="sig-name descname"><span class="pre">file_minor_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#id52" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id52" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="id53">
-<span class="sig-name descname"><span class="pre">file_size_bytes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id53" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">file_major_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#id53" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id54">
+<span class="sig-name descname"><span class="pre">file_minor_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#id54" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id55">
+<span class="sig-name descname"><span class="pre">file_size_bytes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id55" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="id54">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#id54" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id56">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#id56" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -8342,13 +8392,13 @@ in the data files before deletions.</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id55">
-<span class="sig-name descname"><span class="pre">deletion_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.fragment.DeletionFile" title="lance.fragment.DeletionFile"><span class="pre">DeletionFile</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id55" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id57">
+<span class="sig-name descname"><span class="pre">deletion_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.fragment.DeletionFile" title="lance.fragment.DeletionFile"><span class="pre">DeletionFile</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id57" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id56">
-<span class="sig-name descname"><span class="pre">files</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.DataFile" title="lance.fragment.DataFile"><span class="pre">DataFile</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id56" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id58">
+<span class="sig-name descname"><span class="pre">files</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.DataFile" title="lance.fragment.DataFile"><span class="pre">DataFile</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id58" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -8357,8 +8407,8 @@ in the data files before deletions.</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id57">
-<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#id57" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id59">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#id59" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -8374,13 +8424,13 @@ in the data files before deletions.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id58">
-<span class="sig-name descname"><span class="pre">physical_rows</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#id58" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id60">
+<span class="sig-name descname"><span class="pre">physical_rows</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#id60" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id59">
-<span class="sig-name descname"><span class="pre">row_id_meta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.fragment.RowIdMeta" title="lance.fragment.RowIdMeta"><span class="pre">RowIdMeta</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id59" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id61">
+<span class="sig-name descname"><span class="pre">row_id_meta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.fragment.RowIdMeta" title="lance.fragment.RowIdMeta"><span class="pre">RowIdMeta</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id61" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
