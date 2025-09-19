@@ -136,6 +136,7 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.merge"><code class="docutils literal notranslate"><span class="pre">LanceDataset.merge()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.merge_index_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.merge_index_metadata()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.merge_insert"><code class="docutils literal notranslate"><span class="pre">LanceDataset.merge_insert()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.metadata</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.migrate_manifest_paths_v2"><code class="docutils literal notranslate"><span class="pre">LanceDataset.migrate_manifest_paths_v2()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.optimize"><code class="docutils literal notranslate"><span class="pre">LanceDataset.optimize</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.partition_expression"><code class="docutils literal notranslate"><span class="pre">LanceDataset.partition_expression</span></code></a></li>
@@ -148,6 +149,7 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.sample"><code class="docutils literal notranslate"><span class="pre">LanceDataset.sample()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.scanner"><code class="docutils literal notranslate"><span class="pre">LanceDataset.scanner()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.schema"><code class="docutils literal notranslate"><span class="pre">LanceDataset.schema</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.schema_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.schema_metadata</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.session"><code class="docutils literal notranslate"><span class="pre">LanceDataset.session()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.sql"><code class="docutils literal notranslate"><span class="pre">LanceDataset.sql()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.stats"><code class="docutils literal notranslate"><span class="pre">LanceDataset.stats</span></code></a></li>
@@ -158,6 +160,9 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.to_table"><code class="docutils literal notranslate"><span class="pre">LanceDataset.to_table()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.update"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.update_config"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.update_field_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_field_metadata()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.update_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_metadata()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.update_schema_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_schema_metadata()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.uri"><code class="docutils literal notranslate"><span class="pre">LanceDataset.uri</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.validate"><code class="docutils literal notranslate"><span class="pre">LanceDataset.validate()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.version"><code class="docutils literal notranslate"><span class="pre">LanceDataset.version</span></code></a></li>
@@ -273,6 +278,24 @@
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#id24"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.removed_fragment_ids</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.LanceOperation.Update.update_mode"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.update_mode</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#id25"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.updated_fragments</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceOperation.UpdateConfig"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.LanceOperation.UpdateConfig.config_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.config_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.LanceOperation.UpdateConfig.table_metadata_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.table_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.LanceOperation.UpdateConfig.schema_metadata_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.schema_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.LanceOperation.UpdateConfig.field_metadata_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.field_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id26"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.config_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id27"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.field_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id28"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.schema_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id29"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.table_metadata_updates</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceOperation.UpdateMap"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.LanceOperation.UpdateMap.updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.LanceOperation.UpdateMap.replace"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.replace</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id30"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.replace</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id31"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.updates</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -427,6 +450,7 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.merge"><code class="docutils literal notranslate"><span class="pre">LanceDataset.merge()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.merge_index_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.merge_index_metadata()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.merge_insert"><code class="docutils literal notranslate"><span class="pre">LanceDataset.merge_insert()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.metadata</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.migrate_manifest_paths_v2"><code class="docutils literal notranslate"><span class="pre">LanceDataset.migrate_manifest_paths_v2()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.optimize"><code class="docutils literal notranslate"><span class="pre">LanceDataset.optimize</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.partition_expression"><code class="docutils literal notranslate"><span class="pre">LanceDataset.partition_expression</span></code></a></li>
@@ -439,6 +463,7 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.sample"><code class="docutils literal notranslate"><span class="pre">LanceDataset.sample()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.scanner"><code class="docutils literal notranslate"><span class="pre">LanceDataset.scanner()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.schema"><code class="docutils literal notranslate"><span class="pre">LanceDataset.schema</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.schema_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.schema_metadata</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.session"><code class="docutils literal notranslate"><span class="pre">LanceDataset.session()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.sql"><code class="docutils literal notranslate"><span class="pre">LanceDataset.sql()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.stats"><code class="docutils literal notranslate"><span class="pre">LanceDataset.stats</span></code></a></li>
@@ -449,6 +474,9 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.to_table"><code class="docutils literal notranslate"><span class="pre">LanceDataset.to_table()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.update"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.update_config"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.update_field_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_field_metadata()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.update_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_metadata()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.update_schema_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_schema_metadata()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.uri"><code class="docutils literal notranslate"><span class="pre">LanceDataset.uri</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.validate"><code class="docutils literal notranslate"><span class="pre">LanceDataset.validate()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.version"><code class="docutils literal notranslate"><span class="pre">LanceDataset.version</span></code></a></li>
@@ -458,7 +486,7 @@
 <li class="toctree-l2"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation"><code class="docutils literal notranslate"><span class="pre">LanceOperation</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Append"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Append</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Append.fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Append.fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id35"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Append.fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id41"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Append.fragments</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.BaseOperation"><code class="docutils literal notranslate"><span class="pre">LanceOperation.BaseOperation</span></code></a></li>
@@ -480,28 +508,28 @@
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Delete.updated_fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.updated_fragments</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Delete.deleted_fragment_ids"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.deleted_fragment_ids</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Delete.predicate"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.predicate</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id36"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.deleted_fragment_ids</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id37"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.predicate</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id38"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.updated_fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id42"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.deleted_fragment_ids</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id43"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.predicate</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id44"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.updated_fragments</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Merge"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Merge.fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.fragments</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Merge.schema"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.schema</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id39"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id40"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.schema</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id45"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id46"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.schema</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Overwrite"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Overwrite.new_schema"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.new_schema</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Overwrite.fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id41"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id42"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.new_schema</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id47"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id48"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.new_schema</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Project"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Project</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Project.schema"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Project.schema</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id43"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Project.schema</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id49"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Project.schema</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Restore"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Restore</span></code></a><ul>
@@ -511,8 +539,8 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Rewrite"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Rewrite.groups"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.groups</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Rewrite.rewritten_indices"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.rewritten_indices</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id44"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.groups</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id45"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.rewritten_indices</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id50"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.groups</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id51"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.rewritten_indices</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.RewriteGroup"><code class="docutils literal notranslate"><span class="pre">LanceOperation.RewriteGroup</span></code></a><ul>
@@ -534,12 +562,30 @@
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Update.new_fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.new_fragments</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Update.fields_modified"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_modified</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Update.fields_for_preserving_frag_bitmap"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_for_preserving_frag_bitmap</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id46"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_for_preserving_frag_bitmap</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id47"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_modified</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id48"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.new_fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id49"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.removed_fragment_ids</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id52"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_for_preserving_frag_bitmap</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id53"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_modified</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id54"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.new_fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id55"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.removed_fragment_ids</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.Update.update_mode"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.update_mode</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id50"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.updated_fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id56"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.updated_fragments</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.UpdateConfig"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.UpdateConfig.config_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.config_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.UpdateConfig.table_metadata_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.table_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.UpdateConfig.schema_metadata_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.schema_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.UpdateConfig.field_metadata_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.field_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id57"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.config_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id58"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.field_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id59"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.schema_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id60"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.table_metadata_updates</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.UpdateMap"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.UpdateMap.updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#lance.dataset.LanceOperation.UpdateMap.replace"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.replace</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id61"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.replace</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="all-modules.html#id62"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.updates</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -669,13 +715,13 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.fragment.DataFile.file_minor_version"><code class="docutils literal notranslate"><span class="pre">DataFile.file_minor_version</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.fragment.DataFile.file_size_bytes"><code class="docutils literal notranslate"><span class="pre">DataFile.file_size_bytes</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.fragment.DataFile.base_id"><code class="docutils literal notranslate"><span class="pre">DataFile.base_id</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id51"><code class="docutils literal notranslate"><span class="pre">DataFile.column_indices</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id63"><code class="docutils literal notranslate"><span class="pre">DataFile.column_indices</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.fragment.DataFile.field_ids"><code class="docutils literal notranslate"><span class="pre">DataFile.field_ids()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id52"><code class="docutils literal notranslate"><span class="pre">DataFile.fields</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id53"><code class="docutils literal notranslate"><span class="pre">DataFile.file_major_version</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id54"><code class="docutils literal notranslate"><span class="pre">DataFile.file_minor_version</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id55"><code class="docutils literal notranslate"><span class="pre">DataFile.file_size_bytes</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id56"><code class="docutils literal notranslate"><span class="pre">DataFile.path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id64"><code class="docutils literal notranslate"><span class="pre">DataFile.fields</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id65"><code class="docutils literal notranslate"><span class="pre">DataFile.file_major_version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id66"><code class="docutils literal notranslate"><span class="pre">DataFile.file_minor_version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id67"><code class="docutils literal notranslate"><span class="pre">DataFile.file_size_bytes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id68"><code class="docutils literal notranslate"><span class="pre">DataFile.path</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="all-modules.html#lance.fragment.DeletionFile"><code class="docutils literal notranslate"><span class="pre">DeletionFile</span></code></a><ul>
@@ -697,14 +743,14 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.fragment.FragmentMetadata.deletion_file"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.deletion_file</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.fragment.FragmentMetadata.row_id_meta"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.row_id_meta</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.fragment.FragmentMetadata.data_files"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.data_files()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id57"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.deletion_file</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id58"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.files</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id69"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.deletion_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id70"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.files</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.fragment.FragmentMetadata.from_json"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.from_json()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id59"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id71"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.id</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.fragment.FragmentMetadata.num_deletions"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.num_deletions</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.fragment.FragmentMetadata.num_rows"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.num_rows</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id60"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.physical_rows</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id61"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.row_id_meta</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id72"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.physical_rows</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#id73"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.row_id_meta</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.fragment.FragmentMetadata.to_json"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.to_json()</span></code></a></li>
 </ul>
 </li>

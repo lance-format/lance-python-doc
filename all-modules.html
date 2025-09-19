@@ -136,6 +136,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.merge"><code class="docutils literal notranslate"><span class="pre">LanceDataset.merge()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.merge_index_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.merge_index_metadata()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.merge_insert"><code class="docutils literal notranslate"><span class="pre">LanceDataset.merge_insert()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.metadata</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.migrate_manifest_paths_v2"><code class="docutils literal notranslate"><span class="pre">LanceDataset.migrate_manifest_paths_v2()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.optimize"><code class="docutils literal notranslate"><span class="pre">LanceDataset.optimize</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.partition_expression"><code class="docutils literal notranslate"><span class="pre">LanceDataset.partition_expression</span></code></a></li>
@@ -148,6 +149,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.sample"><code class="docutils literal notranslate"><span class="pre">LanceDataset.sample()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.scanner"><code class="docutils literal notranslate"><span class="pre">LanceDataset.scanner()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.schema"><code class="docutils literal notranslate"><span class="pre">LanceDataset.schema</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.schema_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.schema_metadata</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.session"><code class="docutils literal notranslate"><span class="pre">LanceDataset.session()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.sql"><code class="docutils literal notranslate"><span class="pre">LanceDataset.sql()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.stats"><code class="docutils literal notranslate"><span class="pre">LanceDataset.stats</span></code></a></li>
@@ -158,6 +160,9 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.to_table"><code class="docutils literal notranslate"><span class="pre">LanceDataset.to_table()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.update"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.update_config"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.update_field_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_field_metadata()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.update_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_metadata()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.update_schema_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_schema_metadata()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.uri"><code class="docutils literal notranslate"><span class="pre">LanceDataset.uri</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.validate"><code class="docutils literal notranslate"><span class="pre">LanceDataset.validate()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceDataset.version"><code class="docutils literal notranslate"><span class="pre">LanceDataset.version</span></code></a></li>
@@ -273,6 +278,24 @@
 <li class="toctree-l4"><a class="reference internal" href="#id24"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.removed_fragment_ids</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.LanceOperation.Update.update_mode"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.update_mode</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id25"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.updated_fragments</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.LanceOperation.UpdateConfig"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lance.LanceOperation.UpdateConfig.config_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.config_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lance.LanceOperation.UpdateConfig.table_metadata_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.table_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lance.LanceOperation.UpdateConfig.schema_metadata_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.schema_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lance.LanceOperation.UpdateConfig.field_metadata_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.field_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id26"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.config_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id27"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.field_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id28"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.schema_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id29"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.table_metadata_updates</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.LanceOperation.UpdateMap"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lance.LanceOperation.UpdateMap.updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lance.LanceOperation.UpdateMap.replace"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.replace</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id30"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.replace</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id31"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.updates</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -427,6 +450,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.merge"><code class="docutils literal notranslate"><span class="pre">LanceDataset.merge()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.merge_index_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.merge_index_metadata()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.merge_insert"><code class="docutils literal notranslate"><span class="pre">LanceDataset.merge_insert()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.metadata</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.migrate_manifest_paths_v2"><code class="docutils literal notranslate"><span class="pre">LanceDataset.migrate_manifest_paths_v2()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.optimize"><code class="docutils literal notranslate"><span class="pre">LanceDataset.optimize</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.partition_expression"><code class="docutils literal notranslate"><span class="pre">LanceDataset.partition_expression</span></code></a></li>
@@ -439,6 +463,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.sample"><code class="docutils literal notranslate"><span class="pre">LanceDataset.sample()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.scanner"><code class="docutils literal notranslate"><span class="pre">LanceDataset.scanner()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.schema"><code class="docutils literal notranslate"><span class="pre">LanceDataset.schema</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.schema_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.schema_metadata</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.session"><code class="docutils literal notranslate"><span class="pre">LanceDataset.session()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.sql"><code class="docutils literal notranslate"><span class="pre">LanceDataset.sql()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.stats"><code class="docutils literal notranslate"><span class="pre">LanceDataset.stats</span></code></a></li>
@@ -449,6 +474,9 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.to_table"><code class="docutils literal notranslate"><span class="pre">LanceDataset.to_table()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.update"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.update_config"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_config()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.update_field_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_field_metadata()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.update_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_metadata()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.update_schema_metadata"><code class="docutils literal notranslate"><span class="pre">LanceDataset.update_schema_metadata()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.uri"><code class="docutils literal notranslate"><span class="pre">LanceDataset.uri</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.validate"><code class="docutils literal notranslate"><span class="pre">LanceDataset.validate()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceDataset.version"><code class="docutils literal notranslate"><span class="pre">LanceDataset.version</span></code></a></li>
@@ -458,7 +486,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#lance.dataset.LanceOperation"><code class="docutils literal notranslate"><span class="pre">LanceOperation</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.Append"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Append</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Append.fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Append.fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id35"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Append.fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id41"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Append.fragments</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.BaseOperation"><code class="docutils literal notranslate"><span class="pre">LanceOperation.BaseOperation</span></code></a></li>
@@ -480,28 +508,28 @@
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Delete.updated_fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.updated_fragments</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Delete.deleted_fragment_ids"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.deleted_fragment_ids</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Delete.predicate"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.predicate</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id36"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.deleted_fragment_ids</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id37"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.predicate</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id38"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.updated_fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id42"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.deleted_fragment_ids</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id43"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.predicate</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id44"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Delete.updated_fragments</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.Merge"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Merge.fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.fragments</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Merge.schema"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.schema</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id39"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id40"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.schema</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id45"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id46"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Merge.schema</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.Overwrite"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Overwrite.new_schema"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.new_schema</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Overwrite.fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id41"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id42"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.new_schema</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id47"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id48"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Overwrite.new_schema</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.Project"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Project</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Project.schema"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Project.schema</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id43"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Project.schema</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id49"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Project.schema</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.Restore"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Restore</span></code></a><ul>
@@ -511,8 +539,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.Rewrite"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Rewrite.groups"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.groups</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Rewrite.rewritten_indices"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.rewritten_indices</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id44"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.groups</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id45"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.rewritten_indices</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id50"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.groups</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id51"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Rewrite.rewritten_indices</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.RewriteGroup"><code class="docutils literal notranslate"><span class="pre">LanceOperation.RewriteGroup</span></code></a><ul>
@@ -534,12 +562,30 @@
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Update.new_fragments"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.new_fragments</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Update.fields_modified"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_modified</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Update.fields_for_preserving_frag_bitmap"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_for_preserving_frag_bitmap</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id46"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_for_preserving_frag_bitmap</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id47"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_modified</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id48"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.new_fragments</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id49"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.removed_fragment_ids</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id52"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_for_preserving_frag_bitmap</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id53"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.fields_modified</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id54"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.new_fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id55"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.removed_fragment_ids</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.Update.update_mode"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.update_mode</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id50"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.updated_fragments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id56"><code class="docutils literal notranslate"><span class="pre">LanceOperation.Update.updated_fragments</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateConfig"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateConfig.config_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.config_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateConfig.table_metadata_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.table_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateConfig.schema_metadata_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.schema_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateConfig.field_metadata_updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.field_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id57"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.config_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id58"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.field_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id59"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.schema_metadata_updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id60"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateConfig.table_metadata_updates</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap.updates"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.updates</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap.replace"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.replace</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id61"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.replace</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id62"><code class="docutils literal notranslate"><span class="pre">LanceOperation.UpdateMap.updates</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -669,13 +715,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.DataFile.file_minor_version"><code class="docutils literal notranslate"><span class="pre">DataFile.file_minor_version</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.DataFile.file_size_bytes"><code class="docutils literal notranslate"><span class="pre">DataFile.file_size_bytes</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.DataFile.base_id"><code class="docutils literal notranslate"><span class="pre">DataFile.base_id</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id51"><code class="docutils literal notranslate"><span class="pre">DataFile.column_indices</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id63"><code class="docutils literal notranslate"><span class="pre">DataFile.column_indices</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.DataFile.field_ids"><code class="docutils literal notranslate"><span class="pre">DataFile.field_ids()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id52"><code class="docutils literal notranslate"><span class="pre">DataFile.fields</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id53"><code class="docutils literal notranslate"><span class="pre">DataFile.file_major_version</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id54"><code class="docutils literal notranslate"><span class="pre">DataFile.file_minor_version</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id55"><code class="docutils literal notranslate"><span class="pre">DataFile.file_size_bytes</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id56"><code class="docutils literal notranslate"><span class="pre">DataFile.path</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id64"><code class="docutils literal notranslate"><span class="pre">DataFile.fields</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id65"><code class="docutils literal notranslate"><span class="pre">DataFile.file_major_version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id66"><code class="docutils literal notranslate"><span class="pre">DataFile.file_minor_version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id67"><code class="docutils literal notranslate"><span class="pre">DataFile.file_size_bytes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id68"><code class="docutils literal notranslate"><span class="pre">DataFile.path</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#lance.fragment.DeletionFile"><code class="docutils literal notranslate"><span class="pre">DeletionFile</span></code></a><ul>
@@ -697,14 +743,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.FragmentMetadata.deletion_file"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.deletion_file</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.FragmentMetadata.row_id_meta"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.row_id_meta</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.FragmentMetadata.data_files"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.data_files()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id57"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.deletion_file</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id58"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.files</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id69"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.deletion_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id70"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.files</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.FragmentMetadata.from_json"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.from_json()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id59"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id71"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.id</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.FragmentMetadata.num_deletions"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.num_deletions</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.FragmentMetadata.num_rows"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.num_rows</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id60"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.physical_rows</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id61"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.row_id_meta</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id72"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.physical_rows</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id73"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.row_id_meta</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.FragmentMetadata.to_json"><code class="docutils literal notranslate"><span class="pre">FragmentMetadata.to_json()</span></code></a></li>
 </ul>
 </li>
@@ -2127,6 +2173,20 @@ updated, or will be null if they are inserted.</p>
 </div>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="lance.LanceDataset.metadata">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lance.LanceDataset.metadata" title="Link to this definition"></a></dt>
+<dd><p>Get the table metadata of the dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The table metadata as a dictionary of key-value pairs.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="lance.LanceDataset.migrate_manifest_paths_v2">
 <span class="sig-name descname"><span class="pre">migrate_manifest_paths_v2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lance.LanceDataset.migrate_manifest_paths_v2" title="Link to this definition"></a></dt>
@@ -2208,6 +2268,10 @@ this will result in wasted I/O.</p>
 <dt class="sig sig-object py" id="lance.LanceDataset.replace_field_metadata">
 <span class="sig-name descname"><span class="pre">replace_field_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.LanceDataset.replace_field_metadata" title="Link to this definition"></a></dt>
 <dd><p>Replace the metadata of a field in the schema</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.32.1: </span>Use <a class="reference internal" href="#lance.LanceDataset.update_field_metadata" title="lance.LanceDataset.update_field_metadata"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_field_metadata()</span></code></a> with <code class="docutils literal notranslate"><span class="pre">replace=True</span></code> instead.
+This method will be removed in a future version.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -2229,6 +2293,10 @@ this will result in wasted I/O.</p>
 <dt class="sig sig-object py" id="lance.LanceDataset.replace_schema_metadata">
 <span class="sig-name descname"><span class="pre">replace_schema_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.LanceDataset.replace_schema_metadata" title="Link to this definition"></a></dt>
 <dd><p>Replace the schema metadata of the dataset</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.32.1: </span>Use <a class="reference internal" href="#lance.LanceDataset.update_schema_metadata" title="lance.LanceDataset.update_schema_metadata"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_schema_metadata()</span></code></a> with <code class="docutils literal notranslate"><span class="pre">replace=True</span></code> instead.
+This method will be removed in a future version.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>new_metadata</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – The new metadata to set</p>
@@ -2400,6 +2468,20 @@ the following will always return exact KNN results:</p>
 <dt class="sig sig-object py" id="lance.LanceDataset.schema">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.Schema.html#pyarrow.Schema" title="(in Apache Arrow v21.0.0)"><span class="pre">Schema</span></a></em><a class="headerlink" href="#lance.LanceDataset.schema" title="Link to this definition"></a></dt>
 <dd><p>The pyarrow Schema for this dataset</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="lance.LanceDataset.schema_metadata">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">schema_metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lance.LanceDataset.schema_metadata" title="Link to this definition"></a></dt>
+<dd><p>Get the schema metadata of the dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The schema metadata as a dictionary of key-value pairs.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2661,15 +2743,151 @@ cancelled once this timeout is reached. Default is 30 seconds.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lance.LanceDataset.update_config">
-<span class="sig-name descname"><span class="pre">update_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">upsert_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#lance.LanceDataset.update_config" title="Link to this definition"></a></dt>
-<dd><p>Update the dataset configuration.</p>
-<p>This method inserts or updates configuration key-value pairs for the dataset.</p>
+<span class="sig-name descname"><span class="pre">update_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lance.LanceDataset.update_config" title="Link to this definition"></a></dt>
+<dd><p>Update the configuration of the dataset using unified API.</p>
+<p>This method supports both incremental updates (default) and full replacement.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>upsert_values</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em> of </em><em>str to str</em>) – The configuration items to insert or update.
-Both keys and values should be strings.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>values</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em><em>]</em>) – Configuration updates where keys are config keys and values are:
+- str: Set the config key to this value
+- None: Remove the config key (ignored in replace mode)</p></li>
+<li><p><strong>replace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – If True, completely replace all configuration with the provided values.
+If False, incrementally update only the specified keys.</p></li>
+</ul>
 </dd>
 </dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pyarrow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">([</span><span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">write_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;memory://test_config&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Incremental update (add/update specific keys)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_config</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s2">&quot;batch_size&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">,</span> <span class="s2">&quot;compression&quot;</span><span class="p">:</span> <span class="s2">&quot;zstd&quot;</span><span class="p">})</span>
+<span class="go">{...}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Remove a key (incremental mode only)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_config</span><span class="p">({</span><span class="s2">&quot;batch_size&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">})</span>
+<span class="go">{...}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Full replacement (replaces all config)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_config</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s2">&quot;batch_size&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">},</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">{...}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.LanceDataset.update_field_metadata">
+<span class="sig-name descname"><span class="pre">update_field_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_updates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#lance.LanceDataset.update_field_metadata" title="Link to this definition"></a></dt>
+<dd><p>Update metadata for multiple fields in the dataset.</p>
+<p>This method supports both incremental updates (default) and full replacement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>field_updates</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em><em>]</em><em>]</em>) – Field metadata updates where keys are field paths and values are
+metadata dictionaries.
+For each field’s metadata dictionary:
+- str values: Set the metadata key to this value
+- None values: Remove the metadata key (ignored in replace mode)</p></li>
+<li><p><strong>replace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – If True, completely replace all metadata for the specified fields.
+If False, incrementally update only the specified keys for each field.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pyarrow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">([</span><span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]),</span> <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">])],</span>
+<span class="gp">... </span>               <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="s1">&#39;user_name&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">write_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;memory://test_field&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Incremental update for multiple fields</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_field_metadata</span><span class="p">({</span>
+<span class="gp">... </span>    <span class="s2">&quot;user_id&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;User ID&quot;</span><span class="p">,</span> <span class="s2">&quot;nullable&quot;</span><span class="p">:</span> <span class="s2">&quot;false&quot;</span><span class="p">},</span>
+<span class="gp">... </span>    <span class="s2">&quot;user_name&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;User name&quot;</span><span class="p">,</span> <span class="s2">&quot;max_length&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span><span class="p">}</span>
+<span class="gp">... </span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Remove keys (incremental mode only)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_field_metadata</span><span class="p">({</span><span class="s2">&quot;user_id&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;old_key&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}})</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Full replacement for specific fields</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_field_metadata</span><span class="p">({</span>
+<span class="gp">... </span>    <span class="s2">&quot;user_id&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;User ID&quot;</span><span class="p">}</span>
+<span class="gp">... </span><span class="p">},</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.LanceDataset.update_metadata">
+<span class="sig-name descname"><span class="pre">update_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lance.LanceDataset.update_metadata" title="Link to this definition"></a></dt>
+<dd><p>Update the table metadata of the dataset.</p>
+<p>This method supports both incremental updates (default) and full replacement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>values</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em><em>]</em>) – Metadata updates where keys are metadata keys and values are:
+- str: Set the metadata key to this value
+- None: Remove the metadata key (ignored in replace mode)</p></li>
+<li><p><strong>replace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – If True, completely replace all table metadata with the provided values.
+If False, incrementally update only the specified keys.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pyarrow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">([</span><span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">write_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;memory://test_metadata&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Incremental update (add/update specific keys)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_metadata</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2&quot;</span><span class="p">})</span>
+<span class="go">{...}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Remove a key (incremental mode only)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_metadata</span><span class="p">({</span><span class="s2">&quot;old_key&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">})</span>
+<span class="go">{...}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Full replacement (replaces all metadata)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_metadata</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">},</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">{...}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.LanceDataset.update_schema_metadata">
+<span class="sig-name descname"><span class="pre">update_schema_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lance.LanceDataset.update_schema_metadata" title="Link to this definition"></a></dt>
+<dd><p>Update the schema metadata of the dataset.</p>
+<p>This method supports both incremental updates (default) and full replacement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>values</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em><em>]</em>) – Schema metadata updates where keys are metadata keys and values are:
+- str: Set the metadata key to this value
+- None: Remove the metadata key (ignored in replace mode)</p></li>
+<li><p><strong>replace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – If True, completely replace all schema metadata with the provided values.
+If False, incrementally update only the specified keys.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pyarrow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">([</span><span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">write_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;memory://test_schema&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Incremental update (add/update specific keys)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_schema_metadata</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s2">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="s2">&quot;created_by&quot;</span><span class="p">:</span> <span class="s2">&quot;lance&quot;</span><span class="p">})</span>
+<span class="go">{...}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Remove a key (incremental mode only)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_schema_metadata</span><span class="p">({</span><span class="s2">&quot;encoding&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">})</span>
+<span class="go">{...}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Full replacement (replaces all schema metadata)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_schema_metadata</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s2">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">},</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">{...}</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -3850,6 +4068,120 @@ the frag bitmap of the specified indices.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="id25">
 <span class="sig-name descname"><span class="pre">updated_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id25" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lance.LanceOperation.UpdateConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UpdateConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_updates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_metadata_updates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_metadata_updates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_metadata_updates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.LanceOperation.UpdateConfig" title="Link to this definition"></a></dt>
+<dd><p>Operation that updates dataset metadata.</p>
+<p>This operation can update various metadata levels:
+- Dataset configuration
+- Table metadata
+- Schema metadata
+- Field-specific metadata</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.LanceOperation.UpdateConfig.config_updates">
+<span class="sig-name descname"><span class="pre">config_updates</span></span><a class="headerlink" href="#lance.LanceOperation.UpdateConfig.config_updates" title="Link to this definition"></a></dt>
+<dd><p>Updates to the dataset configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="#lance.LanceOperation.UpdateMap" title="lance.LanceOperation.UpdateMap">UpdateMap</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.LanceOperation.UpdateConfig.table_metadata_updates">
+<span class="sig-name descname"><span class="pre">table_metadata_updates</span></span><a class="headerlink" href="#lance.LanceOperation.UpdateConfig.table_metadata_updates" title="Link to this definition"></a></dt>
+<dd><p>Updates to the table metadata.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="#lance.LanceOperation.UpdateMap" title="lance.LanceOperation.UpdateMap">UpdateMap</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.LanceOperation.UpdateConfig.schema_metadata_updates">
+<span class="sig-name descname"><span class="pre">schema_metadata_updates</span></span><a class="headerlink" href="#lance.LanceOperation.UpdateConfig.schema_metadata_updates" title="Link to this definition"></a></dt>
+<dd><p>Updates to the schema metadata.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="#lance.LanceOperation.UpdateMap" title="lance.LanceOperation.UpdateMap">UpdateMap</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.LanceOperation.UpdateConfig.field_metadata_updates">
+<span class="sig-name descname"><span class="pre">field_metadata_updates</span></span><a class="headerlink" href="#lance.LanceOperation.UpdateConfig.field_metadata_updates" title="Link to this definition"></a></dt>
+<dd><p>Updates to field metadata, keyed by field ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[Dict[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>, <a class="reference internal" href="#lance.LanceOperation.UpdateMap" title="lance.LanceOperation.UpdateMap">UpdateMap</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id26">
+<span class="sig-name descname"><span class="pre">config_updates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id26" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id27">
+<span class="sig-name descname"><span class="pre">field_metadata_updates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id27" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id28">
+<span class="sig-name descname"><span class="pre">schema_metadata_updates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id28" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id29">
+<span class="sig-name descname"><span class="pre">table_metadata_updates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id29" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lance.LanceOperation.UpdateMap">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UpdateMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">updates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.LanceOperation.UpdateMap" title="Link to this definition"></a></dt>
+<dd><p>Represents updates to a metadata map.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.LanceOperation.UpdateMap.updates">
+<span class="sig-name descname"><span class="pre">updates</span></span><a class="headerlink" href="#lance.LanceOperation.UpdateMap.updates" title="Link to this definition"></a></dt>
+<dd><p>Dictionary of key-value pairs to update. None values mean delete the key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.LanceOperation.UpdateMap.replace">
+<span class="sig-name descname"><span class="pre">replace</span></span><a class="headerlink" href="#lance.LanceOperation.UpdateMap.replace" title="Link to this definition"></a></dt>
+<dd><p>If True, replace the entire map with the new entries.
+If False, merge the new entries with the existing map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id30">
+<span class="sig-name descname"><span class="pre">replace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#id30" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id31">
+<span class="sig-name descname"><span class="pre">updates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id31" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -5905,6 +6237,20 @@ updated, or will be null if they are inserted.</p>
 </div>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="lance.dataset.LanceDataset.metadata">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lance.dataset.LanceDataset.metadata" title="Link to this definition"></a></dt>
+<dd><p>Get the table metadata of the dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The table metadata as a dictionary of key-value pairs.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="lance.dataset.LanceDataset.migrate_manifest_paths_v2">
 <span class="sig-name descname"><span class="pre">migrate_manifest_paths_v2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceDataset.migrate_manifest_paths_v2" title="Link to this definition"></a></dt>
@@ -5986,6 +6332,10 @@ this will result in wasted I/O.</p>
 <dt class="sig sig-object py" id="lance.dataset.LanceDataset.replace_field_metadata">
 <span class="sig-name descname"><span class="pre">replace_field_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceDataset.replace_field_metadata" title="Link to this definition"></a></dt>
 <dd><p>Replace the metadata of a field in the schema</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.32.1: </span>Use <a class="reference internal" href="#lance.dataset.LanceDataset.update_field_metadata" title="lance.dataset.LanceDataset.update_field_metadata"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_field_metadata()</span></code></a> with <code class="docutils literal notranslate"><span class="pre">replace=True</span></code> instead.
+This method will be removed in a future version.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -6000,13 +6350,17 @@ this will result in wasted I/O.</p>
 <dt class="sig sig-object py" id="lance.dataset.LanceDataset.replace_schema">
 <span class="sig-name descname"><span class="pre">replace_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.Schema.html#pyarrow.Schema" title="(in Apache Arrow v21.0.0)"><span class="pre">Schema</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceDataset.replace_schema" title="Link to this definition"></a></dt>
 <dd><p>Not implemented (just override pyarrow dataset to prevent segfault)</p>
-<p>See <a href="#id29"><span class="problematic" id="id30">:py:method:`replace_schema_metadata`</span></a> or <a href="#id31"><span class="problematic" id="id32">:py:method:`replace_field_metadata`</span></a></p>
+<p>See <a href="#id35"><span class="problematic" id="id36">:py:method:`replace_schema_metadata`</span></a> or <a href="#id37"><span class="problematic" id="id38">:py:method:`replace_field_metadata`</span></a></p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lance.dataset.LanceDataset.replace_schema_metadata">
 <span class="sig-name descname"><span class="pre">replace_schema_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceDataset.replace_schema_metadata" title="Link to this definition"></a></dt>
 <dd><p>Replace the schema metadata of the dataset</p>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.32.1: </span>Use <a class="reference internal" href="#lance.dataset.LanceDataset.update_schema_metadata" title="lance.dataset.LanceDataset.update_schema_metadata"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_schema_metadata()</span></code></a> with <code class="docutils literal notranslate"><span class="pre">replace=True</span></code> instead.
+This method will be removed in a future version.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>new_metadata</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – The new metadata to set</p>
@@ -6179,6 +6533,20 @@ the following will always return exact KNN results:</p>
 <dt class="sig sig-object py" id="lance.dataset.LanceDataset.schema">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.Schema.html#pyarrow.Schema" title="(in Apache Arrow v21.0.0)"><span class="pre">Schema</span></a></em><a class="headerlink" href="#lance.dataset.LanceDataset.schema" title="Link to this definition"></a></dt>
 <dd><p>The pyarrow Schema for this dataset</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="lance.dataset.LanceDataset.schema_metadata">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">schema_metadata</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#lance.dataset.LanceDataset.schema_metadata" title="Link to this definition"></a></dt>
+<dd><p>Get the schema metadata of the dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The schema metadata as a dictionary of key-value pairs.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -6440,15 +6808,151 @@ cancelled once this timeout is reached. Default is 30 seconds.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="lance.dataset.LanceDataset.update_config">
-<span class="sig-name descname"><span class="pre">update_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">upsert_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#lance.dataset.LanceDataset.update_config" title="Link to this definition"></a></dt>
-<dd><p>Update the dataset configuration.</p>
-<p>This method inserts or updates configuration key-value pairs for the dataset.</p>
+<span class="sig-name descname"><span class="pre">update_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lance.dataset.LanceDataset.update_config" title="Link to this definition"></a></dt>
+<dd><p>Update the configuration of the dataset using unified API.</p>
+<p>This method supports both incremental updates (default) and full replacement.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>upsert_values</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em> of </em><em>str to str</em>) – The configuration items to insert or update.
-Both keys and values should be strings.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>values</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em><em>]</em>) – Configuration updates where keys are config keys and values are:
+- str: Set the config key to this value
+- None: Remove the config key (ignored in replace mode)</p></li>
+<li><p><strong>replace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – If True, completely replace all configuration with the provided values.
+If False, incrementally update only the specified keys.</p></li>
+</ul>
 </dd>
 </dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pyarrow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">([</span><span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">write_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;memory://test_config&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Incremental update (add/update specific keys)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_config</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s2">&quot;batch_size&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">,</span> <span class="s2">&quot;compression&quot;</span><span class="p">:</span> <span class="s2">&quot;zstd&quot;</span><span class="p">})</span>
+<span class="go">{...}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Remove a key (incremental mode only)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_config</span><span class="p">({</span><span class="s2">&quot;batch_size&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">})</span>
+<span class="go">{...}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Full replacement (replaces all config)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_config</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s2">&quot;batch_size&quot;</span><span class="p">:</span> <span class="s2">&quot;1000&quot;</span><span class="p">},</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">{...}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.LanceDataset.update_field_metadata">
+<span class="sig-name descname"><span class="pre">update_field_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_updates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#lance.dataset.LanceDataset.update_field_metadata" title="Link to this definition"></a></dt>
+<dd><p>Update metadata for multiple fields in the dataset.</p>
+<p>This method supports both incremental updates (default) and full replacement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>field_updates</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em><em>]</em><em>]</em>) – Field metadata updates where keys are field paths and values are
+metadata dictionaries.
+For each field’s metadata dictionary:
+- str values: Set the metadata key to this value
+- None values: Remove the metadata key (ignored in replace mode)</p></li>
+<li><p><strong>replace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – If True, completely replace all metadata for the specified fields.
+If False, incrementally update only the specified keys for each field.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pyarrow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">([</span><span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]),</span> <span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">])],</span>
+<span class="gp">... </span>               <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="s1">&#39;user_name&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">write_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;memory://test_field&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Incremental update for multiple fields</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_field_metadata</span><span class="p">({</span>
+<span class="gp">... </span>    <span class="s2">&quot;user_id&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;User ID&quot;</span><span class="p">,</span> <span class="s2">&quot;nullable&quot;</span><span class="p">:</span> <span class="s2">&quot;false&quot;</span><span class="p">},</span>
+<span class="gp">... </span>    <span class="s2">&quot;user_name&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;User name&quot;</span><span class="p">,</span> <span class="s2">&quot;max_length&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span><span class="p">}</span>
+<span class="gp">... </span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Remove keys (incremental mode only)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_field_metadata</span><span class="p">({</span><span class="s2">&quot;user_id&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;old_key&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}})</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Full replacement for specific fields</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_field_metadata</span><span class="p">({</span>
+<span class="gp">... </span>    <span class="s2">&quot;user_id&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;User ID&quot;</span><span class="p">}</span>
+<span class="gp">... </span><span class="p">},</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.LanceDataset.update_metadata">
+<span class="sig-name descname"><span class="pre">update_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lance.dataset.LanceDataset.update_metadata" title="Link to this definition"></a></dt>
+<dd><p>Update the table metadata of the dataset.</p>
+<p>This method supports both incremental updates (default) and full replacement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>values</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em><em>]</em>) – Metadata updates where keys are metadata keys and values are:
+- str: Set the metadata key to this value
+- None: Remove the metadata key (ignored in replace mode)</p></li>
+<li><p><strong>replace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – If True, completely replace all table metadata with the provided values.
+If False, incrementally update only the specified keys.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pyarrow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">([</span><span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">write_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;memory://test_metadata&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Incremental update (add/update specific keys)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_metadata</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2&quot;</span><span class="p">})</span>
+<span class="go">{...}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Remove a key (incremental mode only)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_metadata</span><span class="p">({</span><span class="s2">&quot;old_key&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">})</span>
+<span class="go">{...}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Full replacement (replaces all metadata)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_metadata</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">},</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">{...}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.dataset.LanceDataset.update_schema_metadata">
+<span class="sig-name descname"><span class="pre">update_schema_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lance.dataset.LanceDataset.update_schema_metadata" title="Link to this definition"></a></dt>
+<dd><p>Update the schema metadata of the dataset.</p>
+<p>This method supports both incremental updates (default) and full replacement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>values</strong> (<em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em><em>]</em>) – Schema metadata updates where keys are metadata keys and values are:
+- str: Set the metadata key to this value
+- None: Remove the metadata key (ignored in replace mode)</p></li>
+<li><p><strong>replace</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>default False</em>) – If True, completely replace all schema metadata with the provided values.
+If False, incrementally update only the specified keys.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pyarrow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">([</span><span class="n">pa</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])],</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">write_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;memory://test_schema&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Incremental update (add/update specific keys)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_schema_metadata</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s2">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="s2">&quot;created_by&quot;</span><span class="p">:</span> <span class="s2">&quot;lance&quot;</span><span class="p">})</span>
+<span class="go">{...}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Remove a key (incremental mode only)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_schema_metadata</span><span class="p">({</span><span class="s2">&quot;encoding&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">})</span>
+<span class="go">{...}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Full replacement (replaces all schema metadata)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span><span class="o">.</span><span class="n">update_schema_metadata</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">{</span><span class="s2">&quot;encoding&quot;</span><span class="p">:</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">},</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">{...}</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -6526,8 +7030,8 @@ method to create the new dataset.</p>
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id35">
-<span class="sig-name descname"><span class="pre">fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id35" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id41">
+<span class="sig-name descname"><span class="pre">fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id41" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -6664,18 +7168,18 @@ complete the deletion operation.</p>
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id36">
-<span class="sig-name descname"><span class="pre">deleted_fragment_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id36" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id42">
+<span class="sig-name descname"><span class="pre">deleted_fragment_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id42" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id37">
-<span class="sig-name descname"><span class="pre">predicate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#id37" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id43">
+<span class="sig-name descname"><span class="pre">predicate</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#id43" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id38">
-<span class="sig-name descname"><span class="pre">updated_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id38" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id44">
+<span class="sig-name descname"><span class="pre">updated_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id44" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -6748,13 +7252,13 @@ the new columns based on the existing columns. Then use
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id39">
-<span class="sig-name descname"><span class="pre">fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id39" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id45">
+<span class="sig-name descname"><span class="pre">fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id45" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id40">
-<span class="sig-name descname"><span class="pre">schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">LanceSchema</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.Schema.html#pyarrow.Schema" title="(in Apache Arrow v21.0.0)"><span class="pre">Schema</span></a></em><a class="headerlink" href="#id40" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id46">
+<span class="sig-name descname"><span class="pre">schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">LanceSchema</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.Schema.html#pyarrow.Schema" title="(in Apache Arrow v21.0.0)"><span class="pre">Schema</span></a></em><a class="headerlink" href="#id46" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -6814,13 +7318,13 @@ schema to this class. Finally, pass the operation to the
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id41">
-<span class="sig-name descname"><span class="pre">fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id41" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id47">
+<span class="sig-name descname"><span class="pre">fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.13)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id47" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id42">
-<span class="sig-name descname"><span class="pre">new_schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">LanceSchema</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.Schema.html#pyarrow.Schema" title="(in Apache Arrow v21.0.0)"><span class="pre">Schema</span></a></em><a class="headerlink" href="#id42" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id48">
+<span class="sig-name descname"><span class="pre">new_schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">LanceSchema</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://arrow.apache.org/docs/python/generated/pyarrow.Schema.html#pyarrow.Schema" title="(in Apache Arrow v21.0.0)"><span class="pre">Schema</span></a></em><a class="headerlink" href="#id48" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -6866,8 +7370,8 @@ Use this operator for drop column or rename/swap column.</p>
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id43">
-<span class="sig-name descname"><span class="pre">schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">LanceSchema</span></em><a class="headerlink" href="#id43" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id49">
+<span class="sig-name descname"><span class="pre">schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">LanceSchema</span></em><a class="headerlink" href="#id49" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -6915,13 +7419,13 @@ or more files and indices.</p>
 <p>This is an advanced API not intended for general use.</p>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id44">
-<span class="sig-name descname"><span class="pre">groups</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.dataset.LanceOperation.RewriteGroup" title="lance.dataset.LanceOperation.RewriteGroup"><span class="pre">LanceOperation.RewriteGroup</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id44" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id50">
+<span class="sig-name descname"><span class="pre">groups</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.dataset.LanceOperation.RewriteGroup" title="lance.dataset.LanceOperation.RewriteGroup"><span class="pre">LanceOperation.RewriteGroup</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id50" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id45">
-<span class="sig-name descname"><span class="pre">rewritten_indices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">LanceOperation.RewrfittenIndex</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id45" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id51">
+<span class="sig-name descname"><span class="pre">rewritten_indices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">LanceOperation.RewrfittenIndex</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id51" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -7036,23 +7540,23 @@ the frag bitmap of the specified indices.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id46">
-<span class="sig-name descname"><span class="pre">fields_for_preserving_frag_bitmap</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id46" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id52">
+<span class="sig-name descname"><span class="pre">fields_for_preserving_frag_bitmap</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id52" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id47">
-<span class="sig-name descname"><span class="pre">fields_modified</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id47" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id53">
+<span class="sig-name descname"><span class="pre">fields_modified</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id53" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id48">
-<span class="sig-name descname"><span class="pre">new_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id48" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id54">
+<span class="sig-name descname"><span class="pre">new_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id54" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id49">
-<span class="sig-name descname"><span class="pre">removed_fragment_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id49" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id55">
+<span class="sig-name descname"><span class="pre">removed_fragment_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id55" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -7061,8 +7565,122 @@ the frag bitmap of the specified indices.</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id50">
-<span class="sig-name descname"><span class="pre">updated_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id50" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id56">
+<span class="sig-name descname"><span class="pre">updated_fragments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id56" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lance.dataset.LanceOperation.UpdateConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UpdateConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_updates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_metadata_updates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_metadata_updates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_metadata_updates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceOperation.UpdateConfig" title="Link to this definition"></a></dt>
+<dd><p>Operation that updates dataset metadata.</p>
+<p>This operation can update various metadata levels:
+- Dataset configuration
+- Table metadata
+- Schema metadata
+- Field-specific metadata</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.dataset.LanceOperation.UpdateConfig.config_updates">
+<span class="sig-name descname"><span class="pre">config_updates</span></span><a class="headerlink" href="#lance.dataset.LanceOperation.UpdateConfig.config_updates" title="Link to this definition"></a></dt>
+<dd><p>Updates to the dataset configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="#lance.LanceOperation.UpdateMap" title="lance.LanceOperation.UpdateMap">UpdateMap</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.dataset.LanceOperation.UpdateConfig.table_metadata_updates">
+<span class="sig-name descname"><span class="pre">table_metadata_updates</span></span><a class="headerlink" href="#lance.dataset.LanceOperation.UpdateConfig.table_metadata_updates" title="Link to this definition"></a></dt>
+<dd><p>Updates to the table metadata.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="#lance.LanceOperation.UpdateMap" title="lance.LanceOperation.UpdateMap">UpdateMap</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.dataset.LanceOperation.UpdateConfig.schema_metadata_updates">
+<span class="sig-name descname"><span class="pre">schema_metadata_updates</span></span><a class="headerlink" href="#lance.dataset.LanceOperation.UpdateConfig.schema_metadata_updates" title="Link to this definition"></a></dt>
+<dd><p>Updates to the schema metadata.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="#lance.LanceOperation.UpdateMap" title="lance.LanceOperation.UpdateMap">UpdateMap</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.dataset.LanceOperation.UpdateConfig.field_metadata_updates">
+<span class="sig-name descname"><span class="pre">field_metadata_updates</span></span><a class="headerlink" href="#lance.dataset.LanceOperation.UpdateConfig.field_metadata_updates" title="Link to this definition"></a></dt>
+<dd><p>Updates to field metadata, keyed by field ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[Dict[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)">int</a>, <a class="reference internal" href="#lance.LanceOperation.UpdateMap" title="lance.LanceOperation.UpdateMap">UpdateMap</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id57">
+<span class="sig-name descname"><span class="pre">config_updates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id57" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id58">
+<span class="sig-name descname"><span class="pre">field_metadata_updates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id58" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id59">
+<span class="sig-name descname"><span class="pre">schema_metadata_updates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id59" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id60">
+<span class="sig-name descname"><span class="pre">table_metadata_updates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.dataset.LanceOperation.UpdateMap" title="lance.dataset.LanceOperation.UpdateMap"><span class="pre">UpdateMap</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id60" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="lance.dataset.LanceOperation.UpdateMap">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UpdateMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">updates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceOperation.UpdateMap" title="Link to this definition"></a></dt>
+<dd><p>Represents updates to a metadata map.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.dataset.LanceOperation.UpdateMap.updates">
+<span class="sig-name descname"><span class="pre">updates</span></span><a class="headerlink" href="#lance.dataset.LanceOperation.UpdateMap.updates" title="Link to this definition"></a></dt>
+<dd><p>Dictionary of key-value pairs to update. None values mean delete the key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.dataset.LanceOperation.UpdateMap.replace">
+<span class="sig-name descname"><span class="pre">replace</span></span><a class="headerlink" href="#lance.dataset.LanceOperation.UpdateMap.replace" title="Link to this definition"></a></dt>
+<dd><p>If True, replace the entire map with the new entries.
+If False, merge the new entries with the existing map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id61">
+<span class="sig-name descname"><span class="pre">replace</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#id61" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id62">
+<span class="sig-name descname"><span class="pre">updates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.13)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id62" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -8239,8 +8857,8 @@ the same length as <cite>fields</cite>.</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id51">
-<span class="sig-name descname"><span class="pre">column_indices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id51" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id63">
+<span class="sig-name descname"><span class="pre">column_indices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id63" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -8249,28 +8867,28 @@ the same length as <cite>fields</cite>.</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id52">
-<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id52" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id64">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id64" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id53">
-<span class="sig-name descname"><span class="pre">file_major_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#id53" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id65">
+<span class="sig-name descname"><span class="pre">file_major_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#id65" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id54">
-<span class="sig-name descname"><span class="pre">file_minor_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#id54" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id66">
+<span class="sig-name descname"><span class="pre">file_minor_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#id66" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id55">
-<span class="sig-name descname"><span class="pre">file_size_bytes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id55" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id67">
+<span class="sig-name descname"><span class="pre">file_size_bytes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id67" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="id56">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#id56" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id68">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#id68" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -8392,13 +9010,13 @@ in the data files before deletions.</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id57">
-<span class="sig-name descname"><span class="pre">deletion_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.fragment.DeletionFile" title="lance.fragment.DeletionFile"><span class="pre">DeletionFile</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id57" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id69">
+<span class="sig-name descname"><span class="pre">deletion_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.fragment.DeletionFile" title="lance.fragment.DeletionFile"><span class="pre">DeletionFile</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id69" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id58">
-<span class="sig-name descname"><span class="pre">files</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.DataFile" title="lance.fragment.DataFile"><span class="pre">DataFile</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id58" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id70">
+<span class="sig-name descname"><span class="pre">files</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.DataFile" title="lance.fragment.DataFile"><span class="pre">DataFile</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id70" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -8407,8 +9025,8 @@ in the data files before deletions.</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id59">
-<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#id59" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id71">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#id71" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -8424,13 +9042,13 @@ in the data files before deletions.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id60">
-<span class="sig-name descname"><span class="pre">physical_rows</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#id60" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id72">
+<span class="sig-name descname"><span class="pre">physical_rows</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></em><a class="headerlink" href="#id72" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="id61">
-<span class="sig-name descname"><span class="pre">row_id_meta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.fragment.RowIdMeta" title="lance.fragment.RowIdMeta"><span class="pre">RowIdMeta</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id61" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="id73">
+<span class="sig-name descname"><span class="pre">row_id_meta</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#lance.fragment.RowIdMeta" title="lance.fragment.RowIdMeta"><span class="pre">RowIdMeta</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#id73" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
