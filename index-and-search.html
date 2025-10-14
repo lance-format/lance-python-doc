@@ -1090,6 +1090,10 @@ text to lowercase.</p></li>
 tokens.</p></li>
 <li><p><strong>remove_stop_words</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em>, </em><em>default True</em>) – This is for the <code class="docutils literal notranslate"><span class="pre">INVERTED</span></code> index. If True, the index will remove
 stop words.</p></li>
+<li><p><strong>custom_stop_words</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>]</em><em>]</em><em>, </em><em>default None</em>) – This is for the <code class="docutils literal notranslate"><span class="pre">INVERTED</span></code> index, only used when <cite>remove_stop_words</cite> is
+true.
+Users can specify their customised stop words, if none, the built-in stop
+words for the specified language will be used.</p></li>
 <li><p><strong>ascii_folding</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em>, </em><em>default True</em>) – This is for the <code class="docutils literal notranslate"><span class="pre">INVERTED</span></code> index. If True, the index will convert
 non-ascii characters to ascii characters if possible.
 This would remove accents like “é” -&gt; “e”.</p></li>
