@@ -342,10 +342,13 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#lance.ScanStatistics"><code class="docutils literal notranslate"><span class="pre">ScanStatistics</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lance.ScanStatistics.all_counts"><code class="docutils literal notranslate"><span class="pre">ScanStatistics.all_counts</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.ScanStatistics.bytes_read"><code class="docutils literal notranslate"><span class="pre">ScanStatistics.bytes_read</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.ScanStatistics.index_comparisons"><code class="docutils literal notranslate"><span class="pre">ScanStatistics.index_comparisons</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.ScanStatistics.indices_loaded"><code class="docutils literal notranslate"><span class="pre">ScanStatistics.indices_loaded</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.ScanStatistics.iops"><code class="docutils literal notranslate"><span class="pre">ScanStatistics.iops</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.ScanStatistics.parts_loaded"><code class="docutils literal notranslate"><span class="pre">ScanStatistics.parts_loaded</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.ScanStatistics.requests"><code class="docutils literal notranslate"><span class="pre">ScanStatistics.requests</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#lance.Transaction"><code class="docutils literal notranslate"><span class="pre">Transaction</span></code></a><ul>
@@ -4705,9 +4708,22 @@ the target table.</p>
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lance.</span></span><span class="sig-name descname"><span class="pre">ScanStatistics</span></span><a class="headerlink" href="#lance.ScanStatistics" title="Link to this definition"></a></dt>
 <dd><p>Statistics about the scan.</p>
 <dl class="py attribute">
+<dt class="sig sig-object py" id="lance.ScanStatistics.all_counts">
+<span class="sig-name descname"><span class="pre">all_counts</span></span><a class="headerlink" href="#lance.ScanStatistics.all_counts" title="Link to this definition"></a></dt>
+<dd><p>Additional metrics for more detailed statistics. These are subject to change in the future
+and should only be used for debugging purposes.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="lance.ScanStatistics.bytes_read">
 <span class="sig-name descname"><span class="pre">bytes_read</span></span><a class="headerlink" href="#lance.ScanStatistics.bytes_read" title="Link to this definition"></a></dt>
 <dd><p>Number of bytes read from disk</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.ScanStatistics.index_comparisons">
+<span class="sig-name descname"><span class="pre">index_comparisons</span></span><a class="headerlink" href="#lance.ScanStatistics.index_comparisons" title="Link to this definition"></a></dt>
+<dd><p>Number of index comparisons performed</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -4727,6 +4743,12 @@ the actual number due to coalesced I/O</p>
 <dt class="sig sig-object py" id="lance.ScanStatistics.parts_loaded">
 <span class="sig-name descname"><span class="pre">parts_loaded</span></span><a class="headerlink" href="#lance.ScanStatistics.parts_loaded" title="Link to this definition"></a></dt>
 <dd><p>Number of index partitions loaded</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="lance.ScanStatistics.requests">
+<span class="sig-name descname"><span class="pre">requests</span></span><a class="headerlink" href="#lance.ScanStatistics.requests" title="Link to this definition"></a></dt>
+<dd><p>Number of requests made to the storage layer</p>
 </dd></dl>
 
 </dd></dl>
