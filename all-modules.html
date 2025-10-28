@@ -207,6 +207,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceFragment.take"><code class="docutils literal notranslate"><span class="pre">LanceFragment.take()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceFragment.to_batches"><code class="docutils literal notranslate"><span class="pre">LanceFragment.to_batches()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.LanceFragment.to_table"><code class="docutils literal notranslate"><span class="pre">LanceFragment.to_table()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.LanceFragment.update_columns"><code class="docutils literal notranslate"><span class="pre">LanceFragment.update_columns()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#lance.LanceOperation"><code class="docutils literal notranslate"><span class="pre">LanceOperation</span></code></a><ul>
@@ -823,6 +824,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.LanceFragment.take"><code class="docutils literal notranslate"><span class="pre">LanceFragment.take()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.LanceFragment.to_batches"><code class="docutils literal notranslate"><span class="pre">LanceFragment.to_batches()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lance.fragment.LanceFragment.to_table"><code class="docutils literal notranslate"><span class="pre">LanceFragment.to_table()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lance.fragment.LanceFragment.update_columns"><code class="docutils literal notranslate"><span class="pre">LanceFragment.update_columns()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#lance.fragment.RowDatasetVersionMeta"><code class="docutils literal notranslate"><span class="pre">RowDatasetVersionMeta</span></code></a><ul>
@@ -3685,6 +3687,94 @@ default pool.</p></li>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.LanceFragment.update_columns">
+<span class="sig-name descname"><span class="pre">update_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ReaderLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'_rowid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.FragmentMetadata" title="lance.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lance.LanceFragment.update_columns" title="Link to this definition"></a></dt>
+<dd><p>Update existing columns in this fragment.</p>
+<p>This operation performs a left-outer-hash-join with the right table (new data)
+on the column specified by left_on and right_on. For every row in the current
+fragment, the updated column value is:</p>
+<ol class="arabic simple">
+<li><p>If no matched row on the right side, the column value of the left side row.</p></li>
+<li><p>If there is exactly one corresponding row on the right side, the column value
+of the matching row.</p></li>
+<li><p>If there are multiple corresponding rows, the column value of a random row.</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_obj</strong> (<em>Reader-like</em>) – The data to be used for updating. Acceptable types are:
+- Pandas DataFrame, Pyarrow Table, Dataset, Scanner,
+Iterator[RecordBatch], or RecordBatchReader
+The data must include the join column (right_on) and the columns to update.</p></li>
+<li><p><strong>left_on</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>default &quot;_rowid&quot;</em>) – The name of the column in the fragment to join on.</p></li>
+<li><p><strong>right_on</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> or </em><em>None</em>) – The name of the column in data_obj to join on. If None, defaults to left_on.</p></li>
+<li><p><strong>schema</strong> (<em>pa.Schema</em><em>, </em><em>optional</em>) – The schema of the data. If not specified, the schema will be inferred.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple of:
+- FragmentMetadata: The updated fragment metadata
+- List[int]: The list of field IDs that were modified</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[<a class="reference internal" href="#lance.FragmentMetadata" title="lance.FragmentMetadata">FragmentMetadata</a>, List[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)">int</a>]]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pyarrow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create initial dataset</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">({</span>
+<span class="gp">... </span>    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="gp">... </span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">write_dataset</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;dataset&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Prepare update data with _rowid (must be UInt64)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">update_data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">({</span>
+<span class="gp">... </span>    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">]</span>
+<span class="gp">... </span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Update the fragment</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fragment</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">get_fragment</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">updated_fragment</span><span class="p">,</span> <span class="n">fields_modified</span> <span class="o">=</span> <span class="n">fragment</span><span class="o">.</span><span class="n">update_columns</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">update_data</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">left_on</span><span class="o">=</span><span class="s2">&quot;id&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">right_on</span><span class="o">=</span><span class="s2">&quot;id&quot;</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Commit the changes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">lance</span><span class="w"> </span><span class="kn">import</span> <span class="n">LanceOperation</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">op</span> <span class="o">=</span> <span class="n">LanceOperation</span><span class="o">.</span><span class="n">Update</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">updated_fragments</span><span class="o">=</span><span class="p">[</span><span class="n">updated_fragment</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">fields_modified</span><span class="o">=</span><span class="n">fields_modified</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">LanceDataset</span><span class="o">.</span><span class="n">commit</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">op</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">read_version</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">version</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#lance.LanceFragment.merge" title="lance.LanceFragment.merge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LanceFragment.merge</span></code></a></dt><dd><p>Merge new columns into this fragment (adds columns).</p>
+</dd>
+<dt><a class="reference internal" href="#lance.LanceDataset.update" title="lance.LanceDataset.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LanceDataset.update</span></code></a></dt><dd><p>Update rows in the entire dataset.</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>The columns to update must already exist in the fragment</p></li>
+<li><p>The join column (left_on/right_on) will not be updated</p></li>
+<li><p>Metadata columns (_rowid, _rowaddr) cannot be updated</p></li>
+<li><p>This is a low-level API; for most use cases, use Dataset.update() instead</p></li>
+</ul>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -4183,7 +4273,7 @@ or more files and indices.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lance.LanceOperation.Update">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">removed_fragment_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_fragments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_fragments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields_modified</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields_for_preserving_frag_bitmap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.LanceOperation.Update" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">removed_fragment_ids:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_fragments:</span> <span class="pre">~typing.List[~lance.fragment.FragmentMetadata]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_fragments:</span> <span class="pre">~typing.List[~lance.fragment.FragmentMetadata]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields_modified:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields_for_preserving_frag_bitmap:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_mode:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.LanceOperation.Update" title="Link to this definition"></a></dt>
 <dd><p>Operation that updates rows in the dataset.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lance.LanceOperation.Update.removed_fragment_ids">
@@ -4265,7 +4355,7 @@ the frag bitmap of the specified indices.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lance.LanceOperation.Update.update_mode">
-<span class="sig-name descname"><span class="pre">update_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#lance.LanceOperation.Update.update_mode" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">update_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#lance.LanceOperation.Update.update_mode" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -7874,7 +7964,7 @@ or more files and indices.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="lance.dataset.LanceOperation.Update">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">removed_fragment_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_fragments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_fragments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields_modified</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields_for_preserving_frag_bitmap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceOperation.Update" title="Link to this definition"></a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">removed_fragment_ids:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_fragments:</span> <span class="pre">~typing.List[~lance.fragment.FragmentMetadata]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_fragments:</span> <span class="pre">~typing.List[~lance.fragment.FragmentMetadata]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields_modified:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields_for_preserving_frag_bitmap:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_mode:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lance.dataset.LanceOperation.Update" title="Link to this definition"></a></dt>
 <dd><p>Operation that updates rows in the dataset.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lance.dataset.LanceOperation.Update.removed_fragment_ids">
@@ -7956,7 +8046,7 @@ the frag bitmap of the specified indices.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="lance.dataset.LanceOperation.Update.update_mode">
-<span class="sig-name descname"><span class="pre">update_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#lance.dataset.LanceOperation.Update.update_mode" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">update_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#lance.dataset.LanceOperation.Update.update_mode" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -10092,6 +10182,94 @@ default pool.</p></li>
 <dd class="field-odd"><p>Table</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="lance.fragment.LanceFragment.update_columns">
+<span class="sig-name descname"><span class="pre">update_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_obj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ReaderLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'_rowid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_on</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata"><span class="pre">FragmentMetadata</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#lance.fragment.LanceFragment.update_columns" title="Link to this definition"></a></dt>
+<dd><p>Update existing columns in this fragment.</p>
+<p>This operation performs a left-outer-hash-join with the right table (new data)
+on the column specified by left_on and right_on. For every row in the current
+fragment, the updated column value is:</p>
+<ol class="arabic simple">
+<li><p>If no matched row on the right side, the column value of the left side row.</p></li>
+<li><p>If there is exactly one corresponding row on the right side, the column value
+of the matching row.</p></li>
+<li><p>If there are multiple corresponding rows, the column value of a random row.</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_obj</strong> (<em>Reader-like</em>) – The data to be used for updating. Acceptable types are:
+- Pandas DataFrame, Pyarrow Table, Dataset, Scanner,
+Iterator[RecordBatch], or RecordBatchReader
+The data must include the join column (right_on) and the columns to update.</p></li>
+<li><p><strong>left_on</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>default &quot;_rowid&quot;</em>) – The name of the column in the fragment to join on.</p></li>
+<li><p><strong>right_on</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> or </em><em>None</em>) – The name of the column in data_obj to join on. If None, defaults to left_on.</p></li>
+<li><p><strong>schema</strong> (<em>pa.Schema</em><em>, </em><em>optional</em>) – The schema of the data. If not specified, the schema will be inferred.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple of:
+- FragmentMetadata: The updated fragment metadata
+- List[int]: The list of field IDs that were modified</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[<a class="reference internal" href="#lance.fragment.FragmentMetadata" title="lance.fragment.FragmentMetadata">FragmentMetadata</a>, List[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)">int</a>]]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">lance</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pyarrow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pa</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create initial dataset</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">({</span>
+<span class="gp">... </span>    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="gp">... </span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">write_dataset</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;dataset&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Prepare update data with _rowid (must be UInt64)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">update_data</span> <span class="o">=</span> <span class="n">pa</span><span class="o">.</span><span class="n">table</span><span class="p">({</span>
+<span class="gp">... </span>    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">]</span>
+<span class="gp">... </span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Update the fragment</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fragment</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">get_fragment</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">updated_fragment</span><span class="p">,</span> <span class="n">fields_modified</span> <span class="o">=</span> <span class="n">fragment</span><span class="o">.</span><span class="n">update_columns</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">update_data</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">left_on</span><span class="o">=</span><span class="s2">&quot;id&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">right_on</span><span class="o">=</span><span class="s2">&quot;id&quot;</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Commit the changes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">lance</span><span class="w"> </span><span class="kn">import</span> <span class="n">LanceOperation</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">op</span> <span class="o">=</span> <span class="n">LanceOperation</span><span class="o">.</span><span class="n">Update</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">updated_fragments</span><span class="o">=</span><span class="p">[</span><span class="n">updated_fragment</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">fields_modified</span><span class="o">=</span><span class="n">fields_modified</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">lance</span><span class="o">.</span><span class="n">LanceDataset</span><span class="o">.</span><span class="n">commit</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="s2">&quot;dataset&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">op</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">read_version</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">version</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#lance.fragment.LanceFragment.merge" title="lance.fragment.LanceFragment.merge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LanceFragment.merge</span></code></a></dt><dd><p>Merge new columns into this fragment (adds columns).</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">LanceDataset.update</span></code></dt><dd><p>Update rows in the entire dataset.</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>The columns to update must already exist in the fragment</p></li>
+<li><p>The join column (left_on/right_on) will not be updated</p></li>
+<li><p>Metadata columns (_rowid, _rowaddr) cannot be updated</p></li>
+<li><p>This is a low-level API; for most use cases, use Dataset.update() instead</p></li>
+</ul>
 </dd></dl>
 
 </dd></dl>
