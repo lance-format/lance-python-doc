@@ -40,7 +40,7 @@ jobs:
   build-and-deploy:
     # scheduled run should only happen on main repo not forked ones.
     if: |
-      github.event_name != 'schedule' || github.repository == 'lancedb/lance-python-doc'
+      github.event_name != 'schedule' || github.repository == 'lance-format/lance-python-doc'
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     strategy:
@@ -63,7 +63,7 @@ jobs:
       - name: Checkout lance repo
         uses: actions/checkout@v4
         with:
-          repository: lancedb/lance
+          repository: lance-format/lance
           path: lance
       - uses: Swatinem/rust-cache@v2
         with:
