@@ -133,6 +133,7 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.data_storage_version"><code class="docutils literal notranslate"><span class="pre">LanceDataset.data_storage_version</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.delete"><code class="docutils literal notranslate"><span class="pre">LanceDataset.delete()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.delete_config_keys"><code class="docutils literal notranslate"><span class="pre">LanceDataset.delete_config_keys()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.describe_indices"><code class="docutils literal notranslate"><span class="pre">LanceDataset.describe_indices()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.drop"><code class="docutils literal notranslate"><span class="pre">LanceDataset.drop()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.drop_columns"><code class="docutils literal notranslate"><span class="pre">LanceDataset.drop_columns()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.LanceDataset.drop_index"><code class="docutils literal notranslate"><span class="pre">LanceDataset.drop_index()</span></code></a></li>
@@ -474,6 +475,7 @@
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.data_storage_version"><code class="docutils literal notranslate"><span class="pre">LanceDataset.data_storage_version</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.delete"><code class="docutils literal notranslate"><span class="pre">LanceDataset.delete()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.delete_config_keys"><code class="docutils literal notranslate"><span class="pre">LanceDataset.delete_config_keys()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.describe_indices"><code class="docutils literal notranslate"><span class="pre">LanceDataset.describe_indices()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.drop"><code class="docutils literal notranslate"><span class="pre">LanceDataset.drop()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.drop_columns"><code class="docutils literal notranslate"><span class="pre">LanceDataset.drop_columns()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="all-modules.html#lance.dataset.LanceDataset.drop_index"><code class="docutils literal notranslate"><span class="pre">LanceDataset.drop_index()</span></code></a></li>
@@ -1194,7 +1196,7 @@ the indices.</p>
 Or a dictionary of column names to SQL expressions.
 All columns are fetched if None or unspecified.</p></li>
 <li><p><strong>filter</strong> (<em>pa.compute.Expression</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Expression or str that is a valid SQL where clause. See
-<a class="reference external" href="https://lancedb.github.io/lance/guide/read_and_write/#filter-push-down">Lance filter pushdown</a>
+<a class="reference external" href="https://lance.org/guide/read_and_write/#filter-push-down">Lance filter pushdown</a>
 for valid SQL expressions.</p></li>
 <li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>, </em><em>default None</em>) – Fetch up to this many rows. All rows if None or unspecified.</p></li>
 <li><p><strong>offset</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>, </em><em>default None</em>) – Fetch starting with this row. 0 if None or unspecified.</p></li>
